@@ -1,6 +1,7 @@
 import time 
 import threading
 import stackless
+import heapq
 
 class DelayScheduler(object):
   
@@ -9,6 +10,7 @@ class DelayScheduler(object):
     self.tick = tick
     self.running = False
     self.thread=None
+    self.mutex = threading.RLock()
     
   def start(self):
     if self.running:
@@ -21,26 +23,28 @@ class DelayScheduler(object):
   def stop(self):
     self.running=False
     
+  
   def delay_caller(self, delay):
-    """caller will be blocked until delay time has passed"""
-    #TODO: synchronized
-    #TODO: use priority queue, instead of sortin every time
+    """caller will be blocked until delay time has passed. thread safe."""
     ct= time.time()
     channel = stackless.channel()
     channel.preference=1 #prefer the sender
-    self.tasks.append((ct+delay, delay, channel))
-    self.tasks.sort()
+    self.mutex.acquire()
+    heapq.heappush(self.tasks, (ct+delay, delay, channel))
+    self.mutex.release()
     channel.receive()
     
   def _do_work(self):
     while(self.running):
-      if len(self.tasks)>0:
-        t_expired, t_delay, channel = self.tasks[0]
+      self.mutex.acquire()
+      while len(self.tasks)>0:
+        t_expired, t_delay, channel = self.tasks[0] 
         ct = time.time()
         if t_expired < ct:
-          #TODO: there would be a risk to block this thread if codes below are not synchronized.
-          if channel.balance<0:
+          heapq.heappop(self.tasks)
+          if channel.balance<0: # we do not need to check this. should always be <0
             channel.send(None)
-          del self.tasks[0]
-      
+        else:
+          break
+      self.mutex.release()
       time.sleep(self.tick)

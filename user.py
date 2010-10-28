@@ -247,7 +247,7 @@ class User(object):
     
   def create_arena(self):
     """创建房间"""
-    print self.id
+    #print self.id
     rps=self._send_request("events/2/create", 
                            {"userid":self.id, 
                            "mode":"rd", 
@@ -273,7 +273,7 @@ class User(object):
                               rps['mtime']]])
     r = rps['data']
     if (self._check_pb_response_ok(r)):
-      #print "DEBUG", "enter arena %s"%arena_id
+      print "DEBUG", "enter arena %s"%arena_id
       pass
     else:
       if r.code == 419004:
