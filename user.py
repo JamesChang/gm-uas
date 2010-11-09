@@ -83,7 +83,7 @@ class User(object):
       bytes = ''
       while self.switch:
           r= self.sock.recv(2048)
-          if len(r)=="":
+          if len(r)==0:
               raise Exception("connection closed")
           bytes +=r
           bytes = self._parse_package(bytes)
