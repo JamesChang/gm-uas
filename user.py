@@ -126,7 +126,7 @@ class User(object):
     
   def _make_url(self, req):
     """组合URL，连接JAVA写的APP服务器"""
-    return "http://%s:%s/app3/%s?alt=pbbin"%(
+    return "http://%s:%s/app-core/%s?alt=pbbin"%(
       settings.ARENA_SVR[0],
       settings.ARENA_SVR[1],
       req,
