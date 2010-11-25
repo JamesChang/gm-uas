@@ -1,1 +1,6 @@
 *.pyc
+.project
+.pydevproject
+data
+.settings
+config/default.py
