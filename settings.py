@@ -39,6 +39,6 @@ PRINT_LOG = True  #whether print log
 ######################
 #load ../conf/default.py
 import os
-_filename = "../conf/default.py"
+_filename = "config/default.py"
 if (os.path.exists(_filename)):
   execfile(_filename)
