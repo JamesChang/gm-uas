@@ -9,7 +9,7 @@ import context
 #from log import Log  #######################
 import logging,sys
 
-import ability
+import performance
 
 from account import Account
 
@@ -100,7 +100,7 @@ if __name__ == "__main__":
   context.delay_service=scheduler.DelayScheduler()
   context.delay_service.start()
   ablt_ch = stackless.channel()  #性能数据传输通道
-  stackless.tasklet(ability.Ability)(ablt_ch)  #创建性能统计进程
+  stackless.tasklet(performance.Performance)(ablt_ch)  #创建性能统计进程
   from user import User
   print "loading users..."
   for user in USERLIST:

@@ -1,12 +1,12 @@
 # -*- encoding: utf-8 -*-
 #from log import Log
 import logging
-import ability
+import performance
 import msvcrt
 
 def output_log():
     alogger = logging.getLogger('abilitylog')
-    info = ability.RSPTIME
+    info = performance.RSPTIME
     for key in info.keys():
         if 'dict' in str(info[key].__class__):  #是否为dict
             alogger.info(key + ':')     #请求类型
@@ -22,9 +22,9 @@ def output_log():
         
 def output_log_roach():
     arlogger = logging.getLogger('abilitylog_roach')
-    info = ability.RSPTIME_ROACH
+    info = performance.RSPTIME_ROACH
     count = len(info)
-    ability.RSPTIME_ROACH = ability.RSPTIME_ROACH[count:]
+    performance.RSPTIME_ROACH = performance.RSPTIME_ROACH[count:]
     for unit in info[:count]:
         arlogger.info('%s\t%s\t%s'%(unit[0], unit[1], unit[2]))
     arlogger.info('#'*30)
