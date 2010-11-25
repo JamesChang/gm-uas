@@ -1,4 +1,15 @@
 
+
+######################
+# LOG
+######################
+
+PRINT_RUNLOG = True
+
+PRINT_ABILITYLOG = False
+
+PRINT_LOG = True  #whether print log
+
 ######################
 # RANDOM WAIT TIME
 ######################

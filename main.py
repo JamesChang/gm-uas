@@ -6,8 +6,7 @@ import settings
 
 import context
 
-#from log import Log  #######################
-import logging,sys
+import log
 
 import performance
 
@@ -22,53 +21,11 @@ running = False
 
 PARA = parameter.get()
 
-#Log().run_log()  #设置log  #######################
+log.run_log()  #设置log
+log.ability_log_roach()  #设置小强 需要的 log
 USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
 
-def _pathrule(type):  #*****************************************
-  from datetime import datetime
-  tm = time.strftime('%Y-%m-%d %H_%M_%S',time.gmtime())
-  return r'.\data\log\\' + tm + ' ' + type + '.txt'
-
-
 if __name__ == "__main__":
-  import logging,sys
-  logging.getLogger().setLevel(logging.DEBUG)
-  if settings.PRINT_LOG:
-      logging.getLogger().addHandler(logging.StreamHandler(sys.stdout)) #加入标准输出源
-  lpath = _pathrule('runlog')
-  logfile = logging.FileHandler(lpath, "w+")
-  logfile.setLevel(logging.DEBUG)
-  _fmt = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-  logfile.setFormatter(_fmt)
-  rlogger = logging.getLogger('runlog')
-  rlogger.setLevel(logging.DEBUG)
-  rlogger.addHandler(logfile)
-  
-  lpath = _pathrule('abilitylog')
-  logfile = logging.FileHandler(lpath, "w")
-  logfile.setLevel(logging.INFO)
-  _fmt = logging.Formatter("%(message)s")
-  logfile.setFormatter(_fmt)
-  alogger = logging.getLogger('abilitylog')
-  alogger.setLevel(logging.INFO)
-  alogger.addHandler(logfile)
-  
-  lpath = _pathrule('abilitylog_roach')
-  logfile = logging.FileHandler(lpath, "w+")
-  logfile.setLevel(logging.INFO)
-  _fmt = logging.Formatter("%(message)s")
-  logfile.setFormatter(_fmt)
-  arlogger = logging.getLogger('abilitylog_roach')
-  arlogger.setLevel(logging.INFO)
-  arlogger.addHandler(logfile)
-  arlogger.info('users:%s'%(PARA.userrule))
-  arlogger.info('request\tpoint_time\tuse_time')
-
-#===============================================================================
-# 
-#===============================================================================
-
   import random
   random.seed(time.time())
   
