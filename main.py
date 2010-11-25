@@ -13,17 +13,17 @@ import performance
 
 from account import Account
 
-#import parameter  #######################
+import parameter
 
 def _idle(seconds=settings.IDLE_INTERVAL):
   time.sleep(seconds)
 
 running = False
 
-#PARA = parameter.get()  #######################
+PARA = parameter.get()
 
 #Log().run_log()  #设置log  #######################
-#USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
+USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
 
 def _pathrule(type):  #*****************************************
   from datetime import datetime
@@ -62,25 +62,6 @@ if __name__ == "__main__":
   arlogger = logging.getLogger('abilitylog_roach')
   arlogger.setLevel(logging.INFO)
   arlogger.addHandler(logfile)
-  
-  
-  from optparse import OptionParser
-  OPT = OptionParser(usage = "usage: %prog [options] arg...")
-  OPT.add_option('-u', '--users', 
-                      default = 't1-19', 
-                      metavar = 'USERRULE', 
-                      help = 'set testing users[default:%default]', 
-                      dest = 'userrule'
-                      )
-  OPT.add_option('-p', '--password', 
-                      default = 'a', 
-                      metavar = 'PASSWORDRULE', 
-                      help = 'set testing password[default:%default]', 
-                      dest = 'psdrule'
-                      )
-  (paradict, paralist) = OPT.parse_args()
-  PARA = paradict
-  USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
   arlogger.info('users:%s'%(PARA.userrule))
   arlogger.info('request\tpoint_time\tuse_time')
 
