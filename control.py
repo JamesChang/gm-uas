@@ -25,18 +25,17 @@ def output_log_roach():
     info = performance.RSPTIME_ROACH
     count = len(info)
     performance.RSPTIME_ROACH = performance.RSPTIME_ROACH[count:]
-    for unit in info[:count]:
+    for unit in info:
         arlogger.info('%s\t%s\t%s'%(unit[0], unit[1], unit[2]))
-    arlogger.info('#'*30)
+    #arlogger.info('#'*30)
                          
-class Control(object):
 #===============================================================================
 #    def __init__(selfparams):
 #        cd = raw_input()
 #        pass
 #===============================================================================
     
-    def exit(self):
-        output_log()
-        output_log_roach()
-        #Log().ability_log()
+def exit():
+    #output_log()
+    output_log_roach()
+    #Log().ability_log()

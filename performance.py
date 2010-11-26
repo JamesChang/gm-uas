@@ -56,7 +56,7 @@ class Performance(object):
         while True:
             rinf = ch.receive() #接收性能数据,dict[0]测试类型,dict[1]测试数据#
             if rinf[0] == 'rsptime':
-                self.response_time(rinf[1])
+                #self.response_time(rinf[1])
                 RSPTIME_ROACH.append(rinf[1])
                 #self.response_time_roach(rinf[1])
             elif rinf[0] == 'put' :

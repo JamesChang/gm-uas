@@ -202,9 +202,6 @@ class User(object):
     import base64
     self.game_result = base64.standard_b64encode(self.game_result)
     
-  def send_to_ch(self, *args):
-    pass #self.ch.send(*args)
-    
   ##########################################################################
   # 用户行为
   ##########################################################################
@@ -222,7 +219,7 @@ class User(object):
   def list_arena(self):
     """获取arena列表，如果有房间就加入，没有房间就创建一个等人进"""
     rps = self._send_request("events/2/list")
-    self.send_to_ch(['rsptime', ['list_arena', 
+    self.ch.send(['rsptime', ['list_arena', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -238,7 +235,7 @@ class User(object):
         self.enter_arena(a[0].id)
     else:
       RLOG.error("list_arena_%s_%sRESPONSE ERROR: %s"%(self.name,self.id, r))
-      self.send_to_ch(['error', ['list_arena', 
+      self.ch.send(['error', ['list_arena', 
                               rps['ptime'], 
                               r.code]])
     
@@ -251,7 +248,7 @@ class User(object):
                            "private":"false",
                            }
                           )
-    self.send_to_ch(['rsptime', ['create_arena', 
+    self.ch.send(['rsptime', ['create_arena', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -264,7 +261,7 @@ class User(object):
   def enter_arena(self, arena_id):
     """加入一个房间"""
     rps=self._send_request("arenas/%s/enter"%arena_id, {"userid":self.id})
-    self.send_to_ch(['rsptime', ['enter_arena', 
+    self.ch.send(['rsptime', ['enter_arena', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -288,7 +285,7 @@ class User(object):
     """准备"""
     assert self.arena is not None
     rps=self._send_request("arenas/%s/ready"%self.arena, {"userid":self.id})
-    self.send_to_ch(['rsptime', ['make_ready', 
+    self.ch.send(['rsptime', ['make_ready', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -302,7 +299,7 @@ class User(object):
     """离开房间"""
     assert self.arena is not None
     rps=self._send_request("arenas/%s/leave"%self.arena, {"userid":self.id})
-    self.send_to_ch(['rsptime', ['leave_arena', 
+    self.ch.send(['rsptime', ['leave_arena', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -315,7 +312,7 @@ class User(object):
     """开始游戏"""
     assert self.arena is not None
     rps=self._send_request("arenas/%s/start"%self.arena, {"userid":self.id})
-    self.send_to_ch(['rsptime', ['start_game', 
+    self.ch.send(['rsptime', ['start_game', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -335,7 +332,7 @@ class User(object):
     """提交游戏结果"""
     assert self.arena is not None
     rps=self._send_request("arenas/%s/submit_result"%self.arena, {"userid":self.id, "result":self.game_result})
-    self.send_to_ch(['rsptime', ['submit_result', 
+    self.ch.send(['rsptime', ['submit_result', 
                               rps['ptime'], 
                               rps['mtime']]])
     r = rps['data']
@@ -414,8 +411,8 @@ class User(object):
       
       #当自己有开始权限的时候，就开始
       if "start" in msg.arenaMemberUpdated.actions:
-        #from control import Control
-        #Control().exit()
+        import control
+        control.exit()
         if self.arena:
             self.start_game()
   
