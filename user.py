@@ -368,7 +368,8 @@ class User(object):
       if "start" in msg.arenaMemberUpdated.actions:
         #from control import Control
         #Control().exit()
-        self.start_game()
+        if self.arena:
+            self.start_game()
   
   def on_arenaStart(self, msg):
     """游戏开始"""
@@ -380,10 +381,8 @@ class User(object):
     """游戏结束"""
     RLOG.debug("%s arena is end"%self.arena)
     self._sleep(random.random()*settings.USER_RANDOM_SLEEP_TIME)
-    self.leave_arena()
-    
-    #rno = random.randrange(1,3)
-    #if rno % 2 == 0:
-    #  self.leave_arena()
-    #else:
-    #  self.make_ready()
+    rno = random.randrange(1,3)
+    if rno % 2 == 0:
+      self.leave_arena()
+    else:
+      self.make_ready()
