@@ -4,6 +4,7 @@ import urllib2, urllib
 import socket
 import struct 
 import time,random
+from datetime import datetime
 import logging
 
 import settings 
@@ -170,8 +171,9 @@ class User(object):
     """发送请求，解析结果，错误处理, 返回pb"""
     if data is not None:
       data = urllib.urlencode(data)
-    ptime = (time.time()%1)*1000000   #获取微秒
-    ptime = time.strftime('%Y-%m-%d %H:%M:%S.' + str(ptime),time.localtime())
+    ptime = datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")
+#    ptime = (time.time()%1)*1000000   #获取微秒
+#    ptime = time.strftime('%Y-%m-%d %H:%M:%S.' + str(ptime),time.localtime())
     stime = time.time()
     r = urllib2.urlopen(self._make_url(partial_url), data)
     etime = time.time()
