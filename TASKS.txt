@@ -109,3 +109,52 @@ change protobuf 2.1.0 to protobuf 2.3.0
 TASK 5
 ============
 如何修改，让发送请求和接收消息能够“同时”运行？
+
+TASK 6
+==========
+1. Git版本控制
+
+  1.1 Why Git
+   1.1.1 svn 问题
+     慢/依赖于服务器/无网络操作/分支不方便 
+  1.2 获取文件
+     git clone 复制整个版本库
+     git help 帮助。 
+     git help clone 
+  1.2 修改文件，提交修改。index的概念。查看更新。
+     git add “modified filename"
+     git commit 把index的内容提交到版本控制
+     git log 查看更新
+     
+  1.3 更新, 上传
+     git pull 更新本地
+     git push origin 上传
+  
+  1.4 版本切换，分支。
+     git branch <name> 创建分支
+     git branch -d <name> 删除分支
+     git checkout <name> 切换分支
+     
+     合并分支
+     git checkout master
+     git merge <name>
+     git commit -a
+
+     分支命名
+     topic/ability
+     jira/GM-31
+     bug/xxxxx
+   
+
+2. 性能日志的部分
+  Ability -> Performance
+  [bug]现在日志会不删除，累加输出。
+  
+3. 想办法把用户数量做到1K。
+  把登陆时间间隔做长。
+  每场比赛的时间做长。
+  如果单台机器不行，就用多台机器。
+
+4. 我这里，想法把输出服务器状态，让你们能够查看。
+
+5. 给小勇建立一个github账号。并允许提交。
