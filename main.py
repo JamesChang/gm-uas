@@ -22,7 +22,7 @@ running = False
 PARA = parameter.get()
 
 log.run_log()  #设置log
-log.ability_log_roach()  #设置小强 需要的 log
+log.ability_log_roach()  #设置小强需要的log
 USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
 
 if __name__ == "__main__":

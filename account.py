@@ -5,24 +5,8 @@ USERS = {'account' : 't*',
          'passwd' : 'a', 
          'area' : [1,100],
          }
-
-#===============================================================================
-# class GlobalAccount(object):  #命令行缺损下解析代码账号规则
-#    def parse(self, dict): 
-#        global USERS
-#        sint = USERS['area'][0]
-#        eint = USERS['area'][1]+1
-#        sacco = USERS['account']
-#        spass = USERS['passwd']
-#        dlist = []
-#        for no in range(sint,eint):
-#            dacco = sub('\*', str(no), dacco)
-#            dpass = sub('\*', str(no), dpass)
-#            dlist.append([dacco,dpass])
-#        return dlist
-#===============================================================================
     
-class Account(object):  #解析命令行给予账号规则
+class Account(object):
     def parse(self, sacco, spass):
         dlist=[]
         daccolist = self.myrule(sacco)
@@ -40,7 +24,7 @@ class Account(object):  #解析命令行给予账号规则
         for para in plist:
             area = findall('\D*(\d*)-(\d*)\D*', para)
             if area:
-                area = list(area[0])  #把tuple转换成list
+                area = list(area[0])
                 if not area[0]:
                     area[0] = 0
                 else:

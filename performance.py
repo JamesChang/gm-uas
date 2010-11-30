@@ -54,11 +54,10 @@ def _median(list, elmt):
 class Performance(object):
     def __init__(self, ch):
         while True:
-            rinf = ch.receive() #接收性能数据,dict[0]测试类型,dict[1]测试数据#
+            rinf = ch.receive() #接收性能数据,dict[0]测试类型,dict[1]测试数据
             if rinf[0] == 'rsptime':
                 #self.response_time(rinf[1])
                 RSPTIME_ROACH.append(rinf[1])
-                #self.response_time_roach(rinf[1])
             elif rinf[0] == 'put' :
                 self.throughput()
             elif rinf[0] == 'resource' :
@@ -81,12 +80,6 @@ class Performance(object):
         else:
             RSPTIME[dlist[0]] = {}
             RSPTIME[dlist[0]][dlist[1]] = [dlist[2], dlist[2], dlist[2]]
-            
-    def response_time_roach(self, dlist): #响应时间,dlist[0]请求类型,dlist[1]触发时间,dlist[2]响应时间
-        if dlist[0] in RSPTIME_ROACH.keys():
-            RSPTIME_ROACH[dlist[0]].append((dlist[1],dlist[2]))
-        else:
-            RSPTIME_ROACH[dlist[0]]=[(dlist[1],dlist[2])]
     
     def throughput(self): #吞吐量
         pass
