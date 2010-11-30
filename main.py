@@ -22,7 +22,8 @@ running = False
 PARA = parameter.get()
 
 log.run_log()  #设置log
-log.ability_log_roach()  #设置小强需要的log
+log.error_log()  #提取runlog中的error信息
+log.performance_log_roach()  #设置小强需要的log
 USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
 
 if __name__ == "__main__":

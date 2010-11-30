@@ -9,18 +9,18 @@ def _pathrule(type):
     time = strftime('%Y-%m-%d %H_%M_%S',localtime())
     if not os.path.exists("log"):
         os.mkdir("log")
-    return r'.\log\%s %s.txt'%(time,type)
+    return r'.\log\%s %s.log'%(time,type)
     
 def run_log():
     rlog = logging.getLogger('runlog')
     rlog.setLevel(logging.DEBUG)
-    lpath = _pathrule('runlog')
+    lpath = _pathrule('run')
     logfile = logging.FileHandler(lpath, "w")
     logfile.setLevel(logging.DEBUG)
     fmt = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
     logfile.setFormatter(fmt)
     rlog.addHandler(logfile)
-    if settings.PRINT_RUNLOG:
+    if settings.PRINT_RUNLOG and settings.PRINT_LOG:
         rlog.addHandler(logging.StreamHandler(sys.stdout))  #print to screen
     
 def error_log():
@@ -32,27 +32,27 @@ def error_log():
     logfile.setFormatter(fmt)
     rlog.addHandler(logfile)
             
-def ability_log():
-    alog = logging.getLogger('abilitylog')
+def performance_log():
+    alog = logging.getLogger('performancelog')
     alog.setLevel(logging.INFO)
-    lpath = _pathrule('abilitylog')
+    lpath = _pathrule('performance')
     logfile = logging.FileHandler(lpath, "w")
     logfile.setLevel(logging.INFO)
     fmt = logging.Formatter("%(message)s")
     logfile.setFormatter(fmt)
     alog.addHandler(logfile)
-    if settings.PRINT_ABILITYLOG:
+    if settings.PRINT_PERFORMANCELOG and settings.PRINT_LOG:
         alog.addHandler(logging.StreamHandler(sys.stdout))  #print to screen
         
-def ability_log_roach():
-    lpath = _pathrule('abilitylog_roach')
+def performance_log_roach():
+    lpath = _pathrule('performancelog_roach')
     logfile = logging.FileHandler(lpath, "w")
     logfile.setLevel(logging.INFO)
     _fmt = logging.Formatter("%(message)s")
     logfile.setFormatter(_fmt)
-    arlogger = logging.getLogger('abilitylog_roach')
+    arlogger = logging.getLogger('performancelog_roach')
     arlogger.setLevel(logging.INFO)
     arlogger.addHandler(logfile)
     arlogger.info('request\tpoint_time\tuse_time')
-    if settings.PRINT_ABILITYLOG:
+    if settings.PRINT_PERFORMANCELOG and settings.PRINT_LOG:
         arlogger.addHandler(logging.StreamHandler(sys.stdout))  #print to screen

@@ -5,7 +5,7 @@ import performance
 import msvcrt
 
 def output_log():
-    alogger = logging.getLogger('abilitylog')
+    alogger = logging.getLogger('performancelog')
     info = performance.RSPTIME
     for key in info.keys():
         if 'dict' in str(info[key].__class__):  #是否为dict
@@ -21,7 +21,7 @@ def output_log():
         alogger.info('=' * 20)
         
 def output_log_roach():
-    arlogger = logging.getLogger('abilitylog_roach')
+    arlogger = logging.getLogger('performancelog_roach')
     info = performance.RSPTIME_ROACH
     count = len(info)
     performance.RSPTIME_ROACH = performance.RSPTIME_ROACH[count:]
@@ -38,4 +38,4 @@ def output_log_roach():
 def exit():
     #output_log()
     output_log_roach()
-    #Log().ability_log()
+    #Log.performance_log()

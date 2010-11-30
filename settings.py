@@ -6,7 +6,7 @@
 
 PRINT_RUNLOG = True
 
-PRINT_ABILITYLOG = False
+PRINT_PERFORMANCELOG = False
 
 PRINT_LOG = True  #whether print log
 
