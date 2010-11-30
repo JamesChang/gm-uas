@@ -14,5 +14,7 @@ def make_game_result():
   import base64
   d=base64.standard_b64encode(d)
   return d
+
 game_result = make_game_result()
 
+maps = [[6,46,47,48,49], [34,35], [40,41,42,43,44,45]]
