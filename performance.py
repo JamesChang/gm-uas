@@ -1,5 +1,9 @@
 # -*- encoding: utf-8 -*-
 
+from logging import getLogger
+
+PRLOG = getLogger('performancelog_roach')
+
 RSPTIME = {}
 RSPTIME_ROACH = []
 PUT = {}
@@ -54,10 +58,11 @@ def _median(list, elmt):
 class Performance(object):
     def __init__(self, ch):
         while True:
-            rinf = ch.receive() #接收性能数据,dict[0]测试类型,dict[1]测试数据
+            rinf = ch.receive() #接收性能数据,rinf[0]测试类型,rinf[1]测试数据
             if rinf[0] == 'rsptime':
                 #self.response_time(rinf[1])
-                RSPTIME_ROACH.append(rinf[1])
+                #RSPTIME_ROACH.append(rinf[1])
+                PRLOG.info('%s\t%s\t%s'%(rinf[1][0],rinf[1][1],rinf[1][2]))
             elif rinf[0] == 'put' :
                 self.throughput()
             elif rinf[0] == 'resource' :
