@@ -185,7 +185,7 @@ class User(object):
 
   def list_arena(self):
     """获取arena列表，如果有房间就加入，没有房间就创建一个等人进"""
-    rps = self._send_request("events/2/list")
+    rps = self._send_request("events/1/list")
     send = True
     r = rps['data']
     if (self._check_pb_response_ok(r)):
@@ -212,11 +212,16 @@ class User(object):
     
   def create_arena(self):
     """创建房间"""
-    rps=self._send_request("events/2/create", 
+    rps=self._send_request("events/1/create", 
                            {"userid":self.id, 
-                           "mode":"rd", 
+                           "mode":u"对战", 
+                           "map":48, 
                            "private":"false",
                            }
+#                           {"userid":self.id, 
+#                           "mode":"rd", 
+#                           "private":"false",
+#                           }
                           )
     send = True
     r = rps['data']
