@@ -11,7 +11,7 @@ def get():
         
 def options():
     OPT.add_option('-u', '--users', 
-                        default = 'user101-300', 
+                        default = 'user101-301', 
                         metavar = 'USERRULE', 
                         help = 'set testing users[default:%default]', 
                         dest = 'userrule'

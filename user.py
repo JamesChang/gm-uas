@@ -13,6 +13,23 @@ import control
 
 RLOG = logging.getLogger('runlog')
 
+#game result for dota
+def make_game_result():
+  from protobuf.res_gameres_pb2 import GameMessage
+  rst = GameMessage()
+  war3 = rst.war3.add()
+  war3.header.war3Version="War3-1.23-6352"
+  war3.header.messageType = "game result"
+  war3.header.battleType="Dota"
+  war3.header.time = 33225
+  war3.header.userIDOfSender = 12345
+  d = rst.SerializeToString()
+  import base64
+  d=base64.standard_b64encode(d)
+  return d
+
+game_result = make_game_result()
+
 class User(object):
   def __init__(self,name, password):
     self.name = name
@@ -23,6 +40,7 @@ class User(object):
     self.sock = None #socket 连接
     self.ready = False
     self.switch = True #事务流程开关
+    self.event = None
     self.received_packages = stackless.channel()
 
   def _receive_package(self):
@@ -122,8 +140,10 @@ class User(object):
     
     stime = time.time()
     if srv == 'java':
+#        print self._java_make_url(partial_url)
         r = urllib2.urlopen(self._java_make_url(partial_url), data)
     elif srv == 'py':
+#        print self._py_make_url(partial_url)
         r = urllib2.urlopen(self._py_make_url(partial_url), data)
     etime = time.time()
     ptime = datetime.fromtimestamp(stime)
@@ -140,7 +160,7 @@ class User(object):
 
   def _sleep(self, seconds):
     """休息，休息一会儿"""
-    context.delay_service.delay_caller(seconds)
+    context.delay_service.delay_caller(seconds)    
     
   ##########################################################################
   # 用户行为
@@ -185,7 +205,8 @@ class User(object):
 
   def list_arena(self):
     """获取arena列表，如果有房间就加入，没有房间就创建一个等人进"""
-    rps = self._send_request("events/1/list")
+    self.event = random.sample(settings.EVENT, 1)[0]
+    rps = self._send_request("events/%s/list"%self.event)
     send = True
     r = rps['data']
     if (self._check_pb_response_ok(r)):
@@ -212,12 +233,19 @@ class User(object):
     
   def create_arena(self):
     """创建房间"""
-    rps=self._send_request("events/1/create", 
-                           {"userid":self.id, 
-                           "mode":u"对战", 
-                           "map":48, 
-                           "private":"false",
-                           }
+    self.paras = settings.CREAT_ARENA_PARASFORMAT[self.event]
+    if settings.MAPS[self.event]:
+        self.paras['map'] = random.sample(settings.MAPS[self.event], 1)[0]
+    else:
+        self.paras['map'] = None
+    self.paras['userid'] = self.id
+    rps=self._send_request("events/%s/create"%self.event,
+                            self.paras
+#                           {"userid":self.id, 
+#                           "mode":u"对战", 
+#                           "map":48, 
+#                           "private":"false",
+#                           }
 #                           {"userid":self.id, 
 #                           "mode":"rd", 
 #                           "private":"false",
@@ -318,7 +346,7 @@ class User(object):
   def submit_result(self):
     """提交游戏结果"""
     assert self.arena is not None
-    rps=self._send_request("arenas/%s/submit_result"%self.arena, {"userid":self.id, "result":context.game_result})
+    rps=self._send_request("arenas/%s/submit_result"%self.arena, {"userid":self.id, "result":game_result})
     send = True
     r = rps['data']
     if (self._check_pb_response_ok(r)):

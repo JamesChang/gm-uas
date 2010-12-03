@@ -1,3 +1,28 @@
+#-*- encoding: utf-8 -*-
+######################
+# ENVIRONMENT
+######################
+
+EVENT = [1,2,3]
+
+MAPS = [[],[6,46,47,48,49], [34,35], [40,41,42,43,44,45]]
+
+CREAT_ARENA_PARASFORMAT=[{},
+                         {"userid":None, 
+                          "mode":u"对战", 
+                          "map":None, 
+                          "private":"false",
+                         },
+                         {"userid":None, 
+                          "mode":"rd", 
+                          "private":"false",
+                         },
+                         {"userid":None, 
+                          "mode":u"对战", 
+                          "map":None, 
+                          "private":"false",
+                         }   
+                        ]
 
 
 ######################
