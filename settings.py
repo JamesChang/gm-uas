@@ -3,13 +3,13 @@
 # ENVIRONMENT
 ######################
 
-EVENT = [1,2,3]
+EVENT = [1]
 
 MAPS = [[],[6,46,47,48,49], [34,35], [40,41,42,43,44,45]]
 
 CREAT_ARENA_PARASFORMAT=[{},
                          {"userid":None, 
-                          "mode":u"对战", 
+                          "mode":"对战", 
                           "map":None, 
                           "private":"false",
                          },
@@ -18,7 +18,7 @@ CREAT_ARENA_PARASFORMAT=[{},
                           "private":"false",
                          },
                          {"userid":None, 
-                          "mode":u"对战", 
+                          "mode":"对战", 
                           "map":None, 
                           "private":"false",
                          }   
@@ -33,19 +33,19 @@ PRINT_RUNLOG = True
 
 PRINT_PERFORMANCELOG = False
 
-PRINT_LOG = True  #whether print log
+PRINT_LOG = False  #whether print log
 
 ######################
 # RANDOM WAIT TIME
 ######################
 
-BEFORE_READY = 5
+BEFORE_READY = 30
 
-BEFORE_LISTARENA = 11
+BEFORE_LISTARENA = 30
 
-BEFORE_SUBRESULT = 47
+BEFORE_SUBRESULT = 1200
 
-USER_RANDOM_SLEEP_TIME = 10
+USER_RANDOM_SLEEP_TIME = 300
 
 ######################
 # GENERAL SETTINGS
@@ -63,12 +63,12 @@ PRINT_LOG = True  #whether print log
 ######################
 
 #message server network address in format (string host, int port)
-#MSG_SVR = ("172.16.0.14", 13340)
+MSG_SVR = ("180.153.139.142", 13340)
 
 #arena server network address in format of (string host, int port)
-#ARENA_SVR = ("172.16.0.13", 8090)
+ARENA_SVR = ("180.153.139.141", 8090)
 
-#PY_SVR = ("172.16.0.13", 84)
+PY_SVR = ("180.153.139.141", 84)
 
 ######################
 # Instance Config
