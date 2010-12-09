@@ -11,6 +11,9 @@ import settings
 import context
 import control
 
+
+from performance import PERF_CH
+
 RLOG = logging.getLogger('runlog')
 
 #game result for dota
@@ -135,14 +138,12 @@ class User(object):
     """发送请求，解析结果，错误处理, 返回pb"""
     if data is not None:
       data = urllib.urlencode(data)
-    
-    stime = time.time()
     if srv == 'java':
-#        print self._java_make_url(partial_url)
-        r = urllib2.urlopen(self._java_make_url(partial_url), data)
+        url = self._java_make_url(partial_url)
     elif srv == 'py':
-#        print self._py_make_url(partial_url)
-        r = urllib2.urlopen(self._py_make_url(partial_url), data)
+        url = self._py_make_url(partial_url)
+    stime = time.time()
+    r = urllib2.urlopen(url, data)
     etime = time.time()
     ptime = datetime.fromtimestamp(stime)
     ptime = datetime.strftime(ptime,"%Y-%m-%d %H:%M:%S.%f")
@@ -151,7 +152,7 @@ class User(object):
     from protobuf.res_base_pb2 import Response
     pbr=Response()
     pbr.ParseFromString(d)
-    return {'mtime' : etime - stime, 
+    return {'mtime' : '%.3f'%(etime - stime), 
             'ptime' : ptime, 
             'data' : pbr,
             }
@@ -164,10 +165,10 @@ class User(object):
   # 用户行为
   ##########################################################################
     
-  def do(self, ch):
+  def do(self):
     """开始工作"""
     #random sleep for a while
-    self.ch = ch
+    self.ch = PERF_CH
     st = random.random()*settings.USER_RANDOM_SLEEP_TIME
     self._sleep(st)
     self.login()

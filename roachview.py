@@ -41,7 +41,7 @@ def main():
   data = RequestCollection()
 
   #read log
-  subdir = 'Downloads'
+  subdir = 'log'
   fs = [ f for f in os.listdir(subdir) if "roach" in f]
   most_recent = 0
   most_recent_file = None

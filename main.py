@@ -42,13 +42,12 @@ if __name__ == "__main__":
   import scheduler
   context.delay_service=scheduler.DelayScheduler()
   context.delay_service.start()
-  ablt_ch = stackless.channel()  #性能数据传输通道
-  stackless.tasklet(performance.Performance)(ablt_ch)  #创建性能统计进程
+  stackless.tasklet(performance.Performance)()  #创建性能统计进程
   from user import User
   RLOG.info("loading users...")
   for user in USERLIST:
     u = User(*user)
-    stackless.tasklet(u.do)(ablt_ch)
+    stackless.tasklet(u.do)()
 
   RLOG.info("starting stackless python scheduler...")
   running = True

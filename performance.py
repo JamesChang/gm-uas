@@ -4,6 +4,10 @@ from logging import getLogger
 
 PRLOG = getLogger('performancelog_roach')
 
+from stackless import channel
+
+PERF_CH = channel()
+
 RSPTIME = {}
 RSPTIME_ROACH = []
 PUT = {}
@@ -56,9 +60,9 @@ def _median(list, elmt):
 #===============================================================================
 
 class Performance(object):
-    def __init__(self, ch):
+    def __init__(self):
         while True:
-            rinf = ch.receive() #接收性能数据,rinf[0]测试类型,rinf[1]测试数据
+            rinf = PERF_CH.receive() #接收性能数据,rinf[0]测试类型,rinf[1]测试数据
             if rinf[0] == 'rsptime':
                 #self.response_time(rinf[1])
                 #RSPTIME_ROACH.append(rinf[1])
