@@ -3,7 +3,7 @@
 # ENVIRONMENT
 ######################
 
-EVENT = [1]
+EVENT = [2]
 
 MAPS = [[],[6,46,47,48,49], [34,35], [40,41,42,43,44,45]]
 
@@ -39,13 +39,13 @@ PRINT_LOG = False  #whether print log
 # RANDOM WAIT TIME
 ######################
 
-BEFORE_READY = 30
+BEFORE_READY = 0.03
 
-BEFORE_LISTARENA = 30
+BEFORE_LISTARENA = 0.03
 
-BEFORE_SUBRESULT = 1200
+BEFORE_SUBRESULT = 1.2
 
-USER_RANDOM_SLEEP_TIME = 300
+USER_RANDOM_SLEEP_TIME = 0.3
 
 ######################
 # GENERAL SETTINGS

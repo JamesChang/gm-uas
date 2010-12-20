@@ -17,7 +17,16 @@ from account import Account
 import parameter
 
 def _idle(seconds=settings.IDLE_INTERVAL):
-  time.sleep(seconds)
+    time.sleep(seconds)
+
+def get_time(user_len):
+    settings.BEFORE_READY *= user_len
+
+    settings.BEFORE_LISTARENA *= user_len
+
+    settings.BEFORE_SUBRESULT *= user_len
+
+    settings.USER_RANDOM_SLEEP_TIME *= user_len
 
 running = False
 
@@ -45,6 +54,7 @@ if __name__ == "__main__":
   stackless.tasklet(performance.Performance)()  #创建性能统计进程
   from user import User
   RLOG.info("loading users...")
+  get_time(len(USERLIST))
   for user in USERLIST:
     u = User(*user)
     stackless.tasklet(u.do)()

@@ -43,6 +43,8 @@ class User(object):
     self.sock = None #socket 连接
     self.switch = None #事务流程开关
     self.event = None
+    self.content = None
+    self.error = 0
     self.received_packages = stackless.channel()
 
   def _receive_package(self):
@@ -90,6 +92,8 @@ class User(object):
             pass
           elif msg.code ==0x2305:
             self.on_arenaMemberUpdated(msg)
+          elif msg.code == 0x2307:
+            self.on_arenaChated(msg)
           elif msg.code == 0x2308:
             pass
           elif msg.code == 0x230c:
@@ -101,13 +105,13 @@ class User(object):
           else:
             RLOG.info('unknow Msg %s'%msg)
         elif cmd==0x9002: #登录登出成功消息
-          pbr.ParseFromString(payload)  #将bit流解析为对象
-          if pbr.subMsg == 'userTCPLogin':
-              self.on_logined(pbr)
-          elif pbr.subMsg == '':
-              self.on_logouted(pbr)
-          else:
-              RLOG.info('unknow Response %s'%pbr)
+            pbr.ParseFromString(payload)  #将bit流解析为对象
+            if pbr.subMsg == 'userTCPLogin':
+                self.on_logined(pbr)
+            elif pbr.subMsg == '':
+                self.on_logouted(pbr)
+            else:
+                RLOG.info('unknow Response %s'%pbr)
         elif cmd==0x9010: #应为: 0x9010 msg server 发送,说明是正常登陆,被踢,还是踢人
           pass
         else:
@@ -341,7 +345,7 @@ class User(object):
     send = True
     r = rps['data']
     if (self._check_pb_response_ok(r)):
-      RLOG.info("%s_%s submit_result %s"%(self.name, self.id, self.arena))
+      RLOG.debug("%s_%s submit_result %s"%(self.name, self.id, self.arena))
     else:
       if r.code == 403000:
         pass
@@ -371,14 +375,28 @@ class User(object):
         0,
         msg_data)
       self.sock.send(d)
-      RLOG.info("%s_%s logout"%(self.name, self.id))
+      RLOG.debug("%s_%s logout"%(self.name, self.id))
+    
+  def chat(self, content):
+      rps=self._send_request("arenas/%s/chat"%self.arena, {"userid":self.id, "content":content})
+      send = True
+      r = rps['data']
+      if (self._check_pb_response_ok(r)):
+          RLOG.debug("%s_%s chat %s"%(self.name, self.id, content))
+      else:
+          send = False
+          RLOG.error("chat_%s_%sRESPONSE ERROR: %s"%(self.name, self.id, r))
+      if send:
+          self.ch.send(['rsptime', ['chat', 
+                                    rps['ptime'], 
+                                    rps['mtime']]])
     
   ##########################################################################
   # 消息处理
   ##########################################################################
   def on_logouted(self, pbr):
     if self._check_pb_response_ok(pbr):
-      RLOG.info('%s_%s logouted'%(self.name, self.id))
+      RLOG.debug('%s_%s logouted'%(self.name, self.id))
       self.switch = False
       self.sock.close()
       self.id = None
@@ -426,7 +444,15 @@ class User(object):
       if "start" in msg.arenaMemberUpdated.actions:
         #control.exit()
         if self.arena:
-            self.start_game()
+            if self.content == None:
+                i = 0
+                while True:
+                    self.chat(str(i))
+                    if i == 100:
+                        i=0
+                    else:
+                        i+=1
+            #self.start_game()
   
   def on_arenaStarted(self, msg):
     """游戏开始"""
@@ -444,3 +470,21 @@ class User(object):
       self.leave_arena()
     else:
       self.make_ready()
+      
+  def on_arenaChated(self, msg):
+      if self.content == None:
+          self.content = int(msg.groupChat.content)
+      if msg.groupChat.content == str(self.content):
+          RLOG.debug("%s_%s arenaChated %s %s"%(self.name, self.id, msg.groupChat.content, msg.uuid))
+          if self.content == 100:
+              self.content = 0
+          else:
+              self.content+=1
+          self.error = 0
+      else:
+          RLOG.error("%s_%s should receive %s,but receive %s now"%(self.name, self.id, self.content, msg.groupChat.content))
+          if self.error == 3:
+              self.switch = False
+          else:
+              self.error += 1
+      
