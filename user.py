@@ -482,7 +482,7 @@ class User(object):
               self.content+=1
           self.error = 0
       else:
-          RLOG.error("%s_%s should receive %s,but receive %s now"%(self.name, self.id, self.content, msg.groupChat.content))
+          RLOG.error("%s_%s should receive %s,but receive %s now %s"%(self.name, self.id, self.content, msg.groupChat.content, msg.uuid))
           if self.error == 3:
               self.switch = False
           else:
