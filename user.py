@@ -424,6 +424,10 @@ class User(object):
     self.arena = msg.arenaJoined.arena.id
     RLOG.debug("%s_%s arenaJoined %s"%(self.name, self.id, self.arena))
     self._sleep(random.random()*settings.BEFORE_READY)
+    if self.arena in context.arena_member.keys():
+        context.arena_member[self.arena]+=1
+    else:
+        context.arena_member[self.arena]=0
     self.make_ready()
     
   def on_arenaLeaved(self, msg):
@@ -444,14 +448,14 @@ class User(object):
       if "start" in msg.arenaMemberUpdated.actions:
         #control.exit()
         if self.arena:
-            if self.content == None:
+            if self.content == None and context.arena_member[self.arena]==9:
+                self.content = 0
                 i = 0
                 while True:
+                    self._sleep(0.1)
+                    context.content[str(i)]=[0]
                     self.chat(str(i))
-                    if i == 100:
-                        i=0
-                    else:
-                        i+=1
+                    i+=1
             #self.start_game()
   
   def on_arenaStarted(self, msg):
@@ -472,19 +476,25 @@ class User(object):
       self.make_ready()
       
   def on_arenaChated(self, msg):
-      if self.content == None:
-          self.content = int(msg.groupChat.content)
-      if msg.groupChat.content == str(self.content):
-          RLOG.debug("%s_%s arenaChated %s %s"%(self.name, self.id, msg.groupChat.content, msg.uuid))
-          if self.content == 100:
-              self.content = 0
-          else:
-              self.content+=1
-          self.error = 0
+      context.chat_print += 1
+      if context.chat_print%1000 == 0:
+          RLOG.debug(context.content)
+      if context.content[msg.groupChat.content][0]==context.arena_member[self.arena]-1:
+          context.content.__delitem__(msg.groupChat.content)
       else:
-          RLOG.error("%s_%s should receive %s,but receive %s now %s"%(self.name, self.id, self.content, msg.groupChat.content, msg.uuid))
-          if self.error == 3:
-              self.switch = False
-          else:
-              self.error += 1
+          if context.content[msg.groupChat.content][0] == 0:
+              context.content[msg.groupChat.content].append(msg.uuid)
+          context.content[msg.groupChat.content][0]+=1
+#      if self.content == None:
+#          self.content = int(msg.groupChat.content)
+#      if msg.groupChat.content == str(self.content):
+#          RLOG.debug("%s_%s arenaChated %s %s"%(self.name, self.id, msg.groupChat.content, msg.uuid))
+#          self.content+=1
+#          self.error = 0
+#      else:
+#          RLOG.error("%s_%s should receive %s,but receive %s now %s"%(self.name, self.id, self.content, msg.groupChat.content, msg.uuid))
+#          if self.error == 3:
+#              self.switch = False
+#          else:
+#              self.error += 1
       
