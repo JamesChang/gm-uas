@@ -18,10 +18,12 @@ class RequestEntry(object):
       i = int(q*self.count)
       self.quantile.append(self.times[i])
     
+    
 
 class RequestCollection(object):
   def __init__(self):
     self.entries = {}
+    self.time_map = {}
 
   def add(self, name, t_response):
     entry = self.entries.get(name, None)
@@ -29,12 +31,20 @@ class RequestCollection(object):
       self.entries[name] = RequestEntry(name)
       entry = self.entries[name]
     entry.add(t_response)
+    if not self.time_map.has_key(t_response):
+      self.time_map[t_response] = 1
+    else:
+      self.time_map[t_response] += 1
   
   def calculate(self):
     for v in self.entries.values():
       v.calculate()
     
-
+  
+  def get_duplicated_time(self):
+    t=[(k,v) for k,v in self.time_map.items() if v > 1]
+    return t
+        
 
 def main():
   print "Performance Log Viewer"
@@ -81,9 +91,18 @@ def main():
   for r in result:
     print "\t".join(r)
   
+  print
+  print "[Duplication Check]"
+  t = data.get_duplicated_time()
+  if not t:
+    print "OK."
+  else:
+    print "response","\t","times"
+    for i,j in t:
+      print i,"\t\t",j
  
 
 if __name__ == "__main__":
   main()
   print
-  raw_input("Press any key to exit...")
+  raw_input("Press enter to exit...")
