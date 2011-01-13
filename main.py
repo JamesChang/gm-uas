@@ -4,6 +4,8 @@ import time
 
 import settings
 
+import user
+
 import context
 
 import log
@@ -52,11 +54,10 @@ if __name__ == "__main__":
   context.delay_service=scheduler.DelayScheduler()
   context.delay_service.start()
   stackless.tasklet(performance.Performance)()  #创建性能统计进程
-  from user import User
   RLOG.info("loading users...")
   get_time(len(USERLIST))
-  for user in USERLIST:
-    u = User(*user)
+  for userpara in USERLIST:
+    u = user.Arena(*userpara)
     stackless.tasklet(u.do)()
 
   RLOG.info("starting stackless python scheduler...")
