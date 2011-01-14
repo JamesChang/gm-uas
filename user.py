@@ -341,10 +341,10 @@ class Arena(User):
             else:
                 send = False
                 RLOG.error("enter_arena_%s_%sRESPONSE ERROR: %s"%(self.name, self.id, r))    
-            if send:
-                self.ch.send(['rsptime', ['enter_arena', 
-                                        rps['ptime'], 
-                                        rps['mtime']]])
+        if send:
+            self.ch.send(['rsptime', ['enter_arena', 
+                                      rps['ptime'], 
+                                      rps['mtime']]])
 
     def make_ready(self):
         """准备"""
