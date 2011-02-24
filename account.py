@@ -39,7 +39,7 @@ class Account(object):
                     parsed = sub('\d*-\d*', str(no), para)
                     dlist.append(parsed)
             else:
-                dlist = [para]
+                dlist.append(para)
         return dlist
         
             

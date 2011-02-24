@@ -3,9 +3,9 @@
 # ENVIRONMENT
 ######################
 
-EVENT = [2]
+MAPS = {'1':[6,46,47,49],'2':[83,86],'3':[41,42,43,44]} #all
 
-MAPS = [[],[6,46,47,48,49], [34,35,83], [40,41,42,43,44,45]]
+MAPS = {'1':[46]} #1v1
 
 CREAT_ARENA_PARASFORMAT=[{},
                          {"userid":None, 
@@ -39,13 +39,13 @@ PRINT_LOG = False  #whether print log
 # RANDOM WAIT TIME
 ######################
 
-BEFORE_READY = 0.09
+BEFORE_READY = 0.2
 
-BEFORE_LISTARENA = 0.09
+BEFORE_LISTARENA = 0.2
 
-BEFORE_SUBRESULT = 0.12
+BEFORE_SUBRESULT = 60
 
-USER_RANDOM_SLEEP_TIME = 0.09
+USER_RANDOM_SLEEP_TIME = 0.2
 
 ######################
 # GENERAL SETTINGS

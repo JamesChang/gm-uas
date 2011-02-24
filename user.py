@@ -173,7 +173,7 @@ class User(object):
     def _heart(self):
         while 1:
             self._sleep(15)
-            self.sock.send("\x02\x00ab")
+            self.sock.send('\x10\x00\xde\xab\x00\x00\x10\x00\x06\x90\x00\x00\x00\x00}\x00\x00\x00')
   ##########################################################################
   # 用户行为
   ##########################################################################
@@ -277,7 +277,7 @@ class Arena(User):
     
     def list_arena(self):
         """获取arena列表，如果有房间就加入，没有房间就创建一个等人进"""
-        self.event = random.sample(settings.EVENT, 1)[0]
+        self.event = random.sample(settings.MAPS.keys(), 1)[0]
         rps = self._send_request("events/%s/list"%self.event)
         send = True
         r = rps['data']
@@ -473,7 +473,7 @@ class Arena(User):
     def on_arenaStarted(self, msg):
         """游戏开始"""
         RLOG.debug("%s_%s arenaStarted %s"%(self.name, self.id, self.arena))
-        self._sleep(random.random()*settings.BEFORE_SUBRESULT)
+        self._sleep(100 + random.random()*settings.BEFORE_SUBRESULT)
         if self.arena:
             self.submit_result()
       
@@ -509,6 +509,7 @@ class arenaChat(Arena):
 #===============================================================================
 # return message
 #===============================================================================
+
     def on_arenaMemberUpdated(self, msg):
         """用户状态更新，包括自己"""
         if msg.arenaMemberUpdated.userID == self.id and msg.arenaMemberUpdated.arenaID==self.arena:
