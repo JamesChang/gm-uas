@@ -21,15 +21,6 @@ import parameter
 def _idle(seconds=settings.IDLE_INTERVAL):
     time.sleep(seconds)
 
-def get_time(user_len):
-    settings.BEFORE_READY *= user_len
-
-    settings.BEFORE_LISTARENA *= user_len
-
-    settings.BEFORE_SUBRESULT *= user_len
-
-    settings.USER_RANDOM_SLEEP_TIME *= user_len
-
 running = False
 
 PARA = parameter.get()
@@ -41,7 +32,18 @@ RLOG = getLogger('runlog')
 
 USERLIST = Account().parse(PARA.userrule, PARA.psdrule)
 
+def get_time(user_len):
+    settings.BEFORE_READY *= user_len
+
+    settings.BEFORE_LISTARENA *= user_len
+
+    settings.BEFORE_SUBRESULT *= user_len
+
+    settings.USER_RANDOM_SLEEP_TIME *= user_len
+
 if __name__ == "__main__":
+  from os import system
+  system('title gm-uas')
   import random
   random.seed(time.time())
   
