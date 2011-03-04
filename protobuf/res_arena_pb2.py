@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_arena.proto',
   package='',
-  serialized_pb='\n\x0fres_arena.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\x1a\nutil.proto\x1a\x0eres_form.proto\"\xcd\x03\n\x05\x41rena\x12\n\n\x02id\x18\x01 \x01(\r\x12!\n\x0blogicalGame\x18\x02 \x01(\x0b\x32\x0c.LogicalGame\x12#\n\x0cphysicalGame\x18\x03 \x01(\x0b\x32\r.PhysicalGame\x12\x15\n\x07gameMap\x18\x04 \x01(\x0b\x32\x04.Map\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x1b\n\x07players\x18\x06 \x03(\x0b\x32\n.ArenaSlot\x12#\n\nattributes\x18\x07 \x03(\x0b\x32\x0f.StringDictItem\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x1c\n\x06\x66orces\x18\t \x03(\x0b\x32\x0c.BattleForce\x12\x31\n\x17userAttributeDefinition\x18\n \x01(\x0b\x32\x10.ChoiceFieldList\x12\x14\n\x0cprivate_flag\x18\x0b \x01(\x08\x12\x11\n\tchatgroup\x18\x0c \x01(\r\x12\x12\n\nmy_actions\x18\r \x03(\t\x12\x0c\n\x04mode\x18\x0e \x01(\t\x12\x0c\n\x04uuid\x18\x0f \x01(\t\x12\x0c\n\x04type\x18\x14 \x01(\t\x12\x0f\n\x07mappath\x18\x10 \x01(\t\x12\x10\n\x08gamepath\x18\x11 \x01(\t\x12\x0e\n\x06hostID\x18\x12 \x01(\r\x12\x0e\n\x06whoAmI\x18\x13 \x01(\r\"\xae\x01\n\tArenaMini\x12\n\n\x02id\x18\x01 \x01(\r\x12!\n\x0blogicalGame\x18\x02 \x01(\x0b\x32\x0c.LogicalGame\x12#\n\x0cphysicalGame\x18\x03 \x01(\x0b\x32\r.PhysicalGame\x12\x15\n\x07gameMap\x18\x04 \x01(\x0b\x32\x04.Map\x12\x12\n\ntotalCount\x18\x05 \x01(\r\x12\x14\n\x0c\x63urrentCount\x18\x06 \x01(\r\x12\x0c\n\x04mode\x18\x07 \x01(\t\"\x80\x01\n\x0b\x42\x61ttleForce\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05label\x18\x02 \x01(\t\x12\x0f\n\x07partyID\x18\n \x01(\r\x12\x0e\n\x06status\x18\x03 \x01(\t\x12\x10\n\x08leaderID\x18\x0b \x01(\r\x12#\n\nattributes\x18\x04 \x03(\x0b\x32\x0f.StringDictItem\"\x8d\x01\n\tArenaSlot\x12\x18\n\x04user\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x10\n\x08position\x18\x02 \x01(\r\x12\x0f\n\x07\x66orceID\x18\x03 \x01(\r\x12#\n\nattributes\x18\x04 \x03(\x0b\x32\x0f.StringDictItem\x12\x0f\n\x07\x65nabled\x18\x05 \x01(\x08\x12\r\n\x05ready\x18\x06 \x01(\x08\"#\n\tArenaList\x12\x16\n\x06\x61renas\x18\x01 \x03(\x0b\x32\x06.ArenaB\r\n\tproto.resH\x02')
+  serialized_pb='\n\x0fres_arena.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\x1a\nutil.proto\x1a\x0eres_form.proto\"\x91\x04\n\x05\x41rena\x12\n\n\x02id\x18\x01 \x01(\r\x12!\n\x0blogicalGame\x18\x02 \x01(\x0b\x32\x0c.LogicalGame\x12#\n\x0cphysicalGame\x18\x03 \x01(\x0b\x32\r.PhysicalGame\x12\x15\n\x07gameMap\x18\x04 \x01(\x0b\x32\x04.Map\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x1b\n\x07players\x18\x06 \x03(\x0b\x32\n.ArenaSlot\x12\x1c\n\x08referees\x18\x17 \x03(\x0b\x32\n.ArenaSlot\x12#\n\nattributes\x18\x07 \x03(\x0b\x32\x0f.StringDictItem\x12\x0c\n\x04name\x18\x08 \x01(\t\x12\x1c\n\x06\x66orces\x18\t \x03(\x0b\x32\x0c.BattleForce\x12\x31\n\x17userAttributeDefinition\x18\n \x01(\x0b\x32\x10.ChoiceFieldList\x12\x14\n\x0cprivate_flag\x18\x0b \x01(\x08\x12\x11\n\tchatgroup\x18\x0c \x01(\r\x12\x12\n\nmy_actions\x18\r \x03(\t\x12\x0c\n\x04mode\x18\x0e \x01(\t\x12\x0c\n\x04uuid\x18\x0f \x01(\t\x12\x0c\n\x04type\x18\x14 \x01(\t\x12\x0f\n\x07mappath\x18\x10 \x01(\t\x12\x10\n\x08gamepath\x18\x11 \x01(\t\x12\x0e\n\x06hostID\x18\x12 \x01(\r\x12\x0e\n\x06whoAmI\x18\x13 \x01(\r\x12\x12\n\nevent_name\x18\x15 \x01(\t\x12\x10\n\x08\x65vent_id\x18\x16 \x01(\t\"\xae\x01\n\tArenaMini\x12\n\n\x02id\x18\x01 \x01(\r\x12!\n\x0blogicalGame\x18\x02 \x01(\x0b\x32\x0c.LogicalGame\x12#\n\x0cphysicalGame\x18\x03 \x01(\x0b\x32\r.PhysicalGame\x12\x15\n\x07gameMap\x18\x04 \x01(\x0b\x32\x04.Map\x12\x12\n\ntotalCount\x18\x05 \x01(\r\x12\x14\n\x0c\x63urrentCount\x18\x06 \x01(\r\x12\x0c\n\x04mode\x18\x07 \x01(\t\"\x80\x01\n\x0b\x42\x61ttleForce\x12\n\n\x02id\x18\x01 \x01(\r\x12\r\n\x05label\x18\x02 \x01(\t\x12\x0f\n\x07partyID\x18\n \x01(\r\x12\x0e\n\x06status\x18\x03 \x01(\t\x12\x10\n\x08leaderID\x18\x0b \x01(\r\x12#\n\nattributes\x18\x04 \x03(\x0b\x32\x0f.StringDictItem\"\x8d\x01\n\tArenaSlot\x12\x18\n\x04user\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x10\n\x08position\x18\x02 \x01(\r\x12\x0f\n\x07\x66orceID\x18\x03 \x01(\r\x12#\n\nattributes\x18\x04 \x03(\x0b\x32\x0f.StringDictItem\x12\x0f\n\x07\x65nabled\x18\x05 \x01(\x08\x12\r\n\x05ready\x18\x06 \x01(\x08\"#\n\tArenaList\x12\x16\n\x06\x61renas\x18\x01 \x03(\x0b\x32\x06.ArenaB\r\n\tproto.resH\x02')
 
 
 
@@ -65,100 +65,121 @@ _ARENA = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='attributes', full_name='Arena.attributes', index=6,
+      name='referees', full_name='Arena.referees', index=6,
+      number=23, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='attributes', full_name='Arena.attributes', index=7,
       number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='name', full_name='Arena.name', index=7,
+      name='name', full_name='Arena.name', index=8,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='forces', full_name='Arena.forces', index=8,
+      name='forces', full_name='Arena.forces', index=9,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userAttributeDefinition', full_name='Arena.userAttributeDefinition', index=9,
+      name='userAttributeDefinition', full_name='Arena.userAttributeDefinition', index=10,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='private_flag', full_name='Arena.private_flag', index=10,
+      name='private_flag', full_name='Arena.private_flag', index=11,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatgroup', full_name='Arena.chatgroup', index=11,
+      name='chatgroup', full_name='Arena.chatgroup', index=12,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='my_actions', full_name='Arena.my_actions', index=12,
+      name='my_actions', full_name='Arena.my_actions', index=13,
       number=13, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='mode', full_name='Arena.mode', index=13,
+      name='mode', full_name='Arena.mode', index=14,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='uuid', full_name='Arena.uuid', index=14,
+      name='uuid', full_name='Arena.uuid', index=15,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='type', full_name='Arena.type', index=15,
+      name='type', full_name='Arena.type', index=16,
       number=20, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='mappath', full_name='Arena.mappath', index=16,
+      name='mappath', full_name='Arena.mappath', index=17,
       number=16, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='gamepath', full_name='Arena.gamepath', index=17,
+      name='gamepath', full_name='Arena.gamepath', index=18,
       number=17, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='hostID', full_name='Arena.hostID', index=18,
+      name='hostID', full_name='Arena.hostID', index=19,
       number=18, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='whoAmI', full_name='Arena.whoAmI', index=19,
+      name='whoAmI', full_name='Arena.whoAmI', index=20,
       number=19, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='event_name', full_name='Arena.event_name', index=21,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='event_id', full_name='Arena.event_id', index=22,
+      number=22, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -172,7 +193,7 @@ _ARENA = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=80,
-  serialized_end=541,
+  serialized_end=609,
 )
 
 
@@ -241,8 +262,8 @@ _ARENAMINI = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=544,
-  serialized_end=718,
+  serialized_start=612,
+  serialized_end=786,
 )
 
 
@@ -304,8 +325,8 @@ _BATTLEFORCE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=721,
-  serialized_end=849,
+  serialized_start=789,
+  serialized_end=917,
 )
 
 
@@ -367,8 +388,8 @@ _ARENASLOT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=852,
-  serialized_end=993,
+  serialized_start=920,
+  serialized_end=1061,
 )
 
 
@@ -395,8 +416,8 @@ _ARENALIST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=995,
-  serialized_end=1030,
+  serialized_start=1063,
+  serialized_end=1098,
 )
 
 import res_user_pb2
@@ -408,6 +429,7 @@ _ARENA.fields_by_name['logicalGame'].message_type = res_game_pb2._LOGICALGAME
 _ARENA.fields_by_name['physicalGame'].message_type = res_game_pb2._PHYSICALGAME
 _ARENA.fields_by_name['gameMap'].message_type = res_game_pb2._MAP
 _ARENA.fields_by_name['players'].message_type = _ARENASLOT
+_ARENA.fields_by_name['referees'].message_type = _ARENASLOT
 _ARENA.fields_by_name['attributes'].message_type = util_pb2._STRINGDICTITEM
 _ARENA.fields_by_name['forces'].message_type = _BATTLEFORCE
 _ARENA.fields_by_name['userAttributeDefinition'].message_type = res_form_pb2._CHOICEFIELDLIST

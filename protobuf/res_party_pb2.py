@@ -10,41 +10,41 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_party.proto',
   package='',
-  serialized_pb='\n\x0fres_party.proto\x1a\x0eres_user.proto\x1a\x12res_listbase.proto\"^\n\x10PartyGetResponse\x12\n\n\x02id\x18\x01 \x02(\r\x12\x19\n\x05users\x18\x02 \x03(\x0b\x32\n.UserModel\x12\x10\n\x08leaderID\x18\x03 \x01(\r\x12\x11\n\tuserCount\x18\x04 \x01(\r\"T\n\x11PartyListResponse\x12\"\n\x07parties\x18\x01 \x03(\x0b\x32\x11.PartyGetResponse\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParamsB\x12\n\x0eproto.responseH\x02')
+  serialized_pb='\n\x0fres_party.proto\x1a\x0eres_user.proto\x1a\x12res_listbase.proto\"\\\n\nPartyModel\x12\x0c\n\x04uuid\x18\x01 \x02(\t\x12\x1b\n\x05users\x18\x02 \x03(\x0b\x32\x0c.PartyMember\x12\x10\n\x08leaderID\x18\x03 \x01(\r\x12\x11\n\tuserCount\x18\x04 \x01(\r\"o\n\x0bPartyMember\x12\x18\n\x04user\x18\x01 \x02(\x0b\x32\n.UserModel\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x0e\n\x06is_out\x18\x03 \x01(\x08\x12\x13\n\x0bis_updating\x18\x04 \x01(\x08\x12\x11\n\tis_waited\x18\x05 \x01(\x08\"F\n\tPartyList\x12\x1c\n\x07parties\x18\x01 \x03(\x0b\x32\x0b.PartyModel\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParamsB\x12\n\x0eproto.responseH\x02')
 
 
 
 
-_PARTYGETRESPONSE = descriptor.Descriptor(
-  name='PartyGetResponse',
-  full_name='PartyGetResponse',
+_PARTYMODEL = descriptor.Descriptor(
+  name='PartyModel',
+  full_name='PartyModel',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='id', full_name='PartyGetResponse.id', index=0,
-      number=1, type=13, cpp_type=3, label=2,
-      has_default_value=False, default_value=0,
+      name='uuid', full_name='PartyModel.uuid', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='users', full_name='PartyGetResponse.users', index=1,
+      name='users', full_name='PartyModel.users', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='leaderID', full_name='PartyGetResponse.leaderID', index=2,
+      name='leaderID', full_name='PartyModel.leaderID', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userCount', full_name='PartyGetResponse.userCount', index=3,
+      name='userCount', full_name='PartyModel.userCount', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -60,26 +60,82 @@ _PARTYGETRESPONSE = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=55,
-  serialized_end=149,
+  serialized_end=147,
 )
 
 
-_PARTYLISTRESPONSE = descriptor.Descriptor(
-  name='PartyListResponse',
-  full_name='PartyListResponse',
+_PARTYMEMBER = descriptor.Descriptor(
+  name='PartyMember',
+  full_name='PartyMember',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='parties', full_name='PartyListResponse.parties', index=0,
+      name='user', full_name='PartyMember.user', index=0,
+      number=1, type=11, cpp_type=10, label=2,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='status', full_name='PartyMember.status', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='is_out', full_name='PartyMember.is_out', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='is_updating', full_name='PartyMember.is_updating', index=3,
+      number=4, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='is_waited', full_name='PartyMember.is_waited', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=149,
+  serialized_end=260,
+)
+
+
+_PARTYLIST = descriptor.Descriptor(
+  name='PartyList',
+  full_name='PartyList',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='parties', full_name='PartyList.parties', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='params', full_name='PartyListResponse.params', index=1,
+      name='params', full_name='PartyList.params', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -94,27 +150,34 @@ _PARTYLISTRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=151,
-  serialized_end=235,
+  serialized_start=262,
+  serialized_end=332,
 )
 
 import res_user_pb2
 import res_listbase_pb2
 
-_PARTYGETRESPONSE.fields_by_name['users'].message_type = res_user_pb2._USERMODEL
-_PARTYLISTRESPONSE.fields_by_name['parties'].message_type = _PARTYGETRESPONSE
-_PARTYLISTRESPONSE.fields_by_name['params'].message_type = res_listbase_pb2._LISTPARAMS
+_PARTYMODEL.fields_by_name['users'].message_type = _PARTYMEMBER
+_PARTYMEMBER.fields_by_name['user'].message_type = res_user_pb2._USERMODEL
+_PARTYLIST.fields_by_name['parties'].message_type = _PARTYMODEL
+_PARTYLIST.fields_by_name['params'].message_type = res_listbase_pb2._LISTPARAMS
 
-class PartyGetResponse(message.Message):
+class PartyModel(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _PARTYGETRESPONSE
+  DESCRIPTOR = _PARTYMODEL
   
-  # @@protoc_insertion_point(class_scope:PartyGetResponse)
+  # @@protoc_insertion_point(class_scope:PartyModel)
 
-class PartyListResponse(message.Message):
+class PartyMember(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _PARTYLISTRESPONSE
+  DESCRIPTOR = _PARTYMEMBER
   
-  # @@protoc_insertion_point(class_scope:PartyListResponse)
+  # @@protoc_insertion_point(class_scope:PartyMember)
+
+class PartyList(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _PARTYLIST
+  
+  # @@protoc_insertion_point(class_scope:PartyList)
 
 # @@protoc_insertion_point(module_scope)

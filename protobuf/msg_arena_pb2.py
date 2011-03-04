@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='msg_arena.proto',
   package='',
-  serialized_pb='\n\x0fmsg_arena.proto\x1a\x0fres_arena.proto\x1a\x11res_gameres.proto\x1a\x0eres_user.proto\"$\n\x0b\x41renaJoined\x12\x15\n\x05\x61rena\x18\x02 \x01(\x0b\x32\x06.Arena\"\x1e\n\x0b\x41renaLeaved\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\"}\n\x0fUserJoinedArena\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x18\n\x04user\x18\x06 \x01(\x0b\x32\n.UserModel\x12\x0c\n\x04role\x18\x07 \x01(\t\x12\x10\n\x08position\x18\x08 \x01(\x05\x12\x0f\n\x07\x61\x63tions\x18\t \x03(\t\"2\n\x0fUserLeavedArena\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\"\x89\x01\n\x12\x41renaMemberUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06userID\x18\x02 \x02(\r\x12\x12\n\nuserStatus\x18\x03 \x01(\t\x12\x0c\n\x04role\x18\x04 \x01(\t\x12\x10\n\x08position\x18\x05 \x01(\x05\x12\x0f\n\x07\x61\x63tions\x18\x06 \x03(\t\x12\r\n\x05ready\x18\x07 \x01(\x08\"{\n\x0f\x41renaInvitation\x12\x1b\n\x07inviter\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x11\n\tarenaName\x18\x02 \x01(\t\x12\x11\n\teventName\x18\x03 \x01(\t\x12\x0f\n\x07\x61renaID\x18\x04 \x01(\r\x12\x14\n\x0ctargetUserID\x18\x05 \x01(\r\":\n\x12\x41renaLeaderChanged\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x13\n\x0bnewLeaderID\x18\x02 \x02(\r\"K\n\x17\x41renaForceStatusUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0f\n\x07\x66orceID\x18\x02 \x01(\r\x12\x0e\n\x06status\x18\x03 \x01(\t\"#\n\nArenaStart\x12\x15\n\x05\x61rena\x18\x01 \x02(\x0b\x32\x06.Arena\"K\n\x12\x41renaStatusUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06status\x18\x02 \x02(\t\x12\x14\n\x0cprivate_flag\x18\x03 \x02(\x08\";\n\nArenaEnded\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x1c\n\x06result\x18\x02 \x02(\x0b\x32\x0c.GameMessage\"X\n\x19\x41renaUserAttributeUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\r\n\x05value\x18\x04 \x01(\t\"H\n\x14\x41renaSlotLockUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06slotID\x18\x02 \x02(\r\x12\x0f\n\x07\x65nabled\x18\x03 \x01(\x08\x42\r\n\tproto.msgH\x02')
+  serialized_pb='\n\x0fmsg_arena.proto\x1a\x0fres_arena.proto\x1a\x11res_gameres.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\"$\n\x0b\x41renaJoined\x12\x15\n\x05\x61rena\x18\x02 \x01(\x0b\x32\x06.Arena\"\x1e\n\x0b\x41renaLeaved\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\"}\n\x0fUserJoinedArena\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x18\n\x04user\x18\x06 \x01(\x0b\x32\n.UserModel\x12\x0c\n\x04role\x18\x07 \x01(\t\x12\x10\n\x08position\x18\x08 \x01(\x05\x12\x0f\n\x07\x61\x63tions\x18\t \x03(\t\"2\n\x0fUserLeavedArena\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\"\x89\x01\n\x12\x41renaMemberUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06userID\x18\x02 \x02(\r\x12\x12\n\nuserStatus\x18\x03 \x01(\t\x12\x0c\n\x04role\x18\x04 \x01(\t\x12\x10\n\x08position\x18\x05 \x01(\x05\x12\x0f\n\x07\x61\x63tions\x18\x06 \x03(\t\x12\r\n\x05ready\x18\x07 \x01(\x08\"\x95\x01\n\x0f\x41renaInvitation\x12\x1b\n\x07inviter\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x11\n\tarenaName\x18\x02 \x01(\t\x12\x11\n\teventName\x18\x03 \x01(\t\x12\x0f\n\x07\x61renaID\x18\x04 \x01(\r\x12\x14\n\x0ctargetUserID\x18\x05 \x01(\r\x12\x18\n\x05\x65vent\x18\x06 \x01(\x0b\x32\t.EventGet\":\n\x12\x41renaLeaderChanged\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x13\n\x0bnewLeaderID\x18\x02 \x02(\r\"K\n\x17\x41renaForceStatusUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0f\n\x07\x66orceID\x18\x02 \x01(\r\x12\x0e\n\x06status\x18\x03 \x01(\t\"5\n\nArenaStart\x12\x15\n\x05\x61rena\x18\x01 \x02(\x0b\x32\x06.Arena\x12\x10\n\x08\x62\x61ttleID\x18\x02 \x01(\t\"K\n\x12\x41renaStatusUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06status\x18\x02 \x02(\t\x12\x14\n\x0cprivate_flag\x18\x03 \x02(\x08\"`\n\nArenaEnded\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x1c\n\x06result\x18\x02 \x01(\x0b\x32\x0c.GameMessage\x12\x14\n\x0cwinner_force\x18\x03 \x01(\x05\x12\r\n\x05\x65rror\x18\x04 \x01(\t\"X\n\x19\x41renaUserAttributeUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x0b\n\x03key\x18\x03 \x01(\t\x12\r\n\x05value\x18\x04 \x01(\t\"H\n\x14\x41renaSlotLockUpdated\x12\x0f\n\x07\x61renaID\x18\x01 \x02(\r\x12\x0e\n\x06slotID\x18\x02 \x02(\r\x12\x0f\n\x07\x65nabled\x18\x03 \x01(\x08\x42\r\n\tproto.msgH\x02')
 
 
 
@@ -38,8 +38,8 @@ _ARENAJOINED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=71,
-  serialized_end=107,
+  serialized_start=87,
+  serialized_end=123,
 )
 
 
@@ -66,8 +66,8 @@ _ARENALEAVED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=109,
-  serialized_end=139,
+  serialized_start=125,
+  serialized_end=155,
 )
 
 
@@ -129,8 +129,8 @@ _USERJOINEDARENA = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=141,
-  serialized_end=266,
+  serialized_start=157,
+  serialized_end=282,
 )
 
 
@@ -164,8 +164,8 @@ _USERLEAVEDARENA = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=268,
-  serialized_end=318,
+  serialized_start=284,
+  serialized_end=334,
 )
 
 
@@ -234,8 +234,8 @@ _ARENAMEMBERUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=321,
-  serialized_end=458,
+  serialized_start=337,
+  serialized_end=474,
 )
 
 
@@ -281,6 +281,13 @@ _ARENAINVITATION = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='event', full_name='ArenaInvitation.event', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -290,8 +297,8 @@ _ARENAINVITATION = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=460,
-  serialized_end=583,
+  serialized_start=477,
+  serialized_end=626,
 )
 
 
@@ -325,8 +332,8 @@ _ARENALEADERCHANGED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=585,
-  serialized_end=643,
+  serialized_start=628,
+  serialized_end=686,
 )
 
 
@@ -367,8 +374,8 @@ _ARENAFORCESTATUSUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=645,
-  serialized_end=720,
+  serialized_start=688,
+  serialized_end=763,
 )
 
 
@@ -386,6 +393,13 @@ _ARENASTART = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='battleID', full_name='ArenaStart.battleID', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -395,8 +409,8 @@ _ARENASTART = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=722,
-  serialized_end=757,
+  serialized_start=765,
+  serialized_end=818,
 )
 
 
@@ -437,8 +451,8 @@ _ARENASTATUSUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=759,
-  serialized_end=834,
+  serialized_start=820,
+  serialized_end=895,
 )
 
 
@@ -458,8 +472,22 @@ _ARENAENDED = descriptor.Descriptor(
       options=None),
     descriptor.FieldDescriptor(
       name='result', full_name='ArenaEnded.result', index=1,
-      number=2, type=11, cpp_type=10, label=2,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='winner_force', full_name='ArenaEnded.winner_force', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='error', full_name='ArenaEnded.error', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -472,8 +500,8 @@ _ARENAENDED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=836,
-  serialized_end=895,
+  serialized_start=897,
+  serialized_end=993,
 )
 
 
@@ -521,8 +549,8 @@ _ARENAUSERATTRIBUTEUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=897,
-  serialized_end=985,
+  serialized_start=995,
+  serialized_end=1083,
 )
 
 
@@ -563,17 +591,19 @@ _ARENASLOTLOCKUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=987,
-  serialized_end=1059,
+  serialized_start=1085,
+  serialized_end=1157,
 )
 
 import res_arena_pb2
 import res_gameres_pb2
 import res_user_pb2
+import res_game_pb2
 
 _ARENAJOINED.fields_by_name['arena'].message_type = res_arena_pb2._ARENA
 _USERJOINEDARENA.fields_by_name['user'].message_type = res_user_pb2._USERMODEL
 _ARENAINVITATION.fields_by_name['inviter'].message_type = res_user_pb2._USERMODEL
+_ARENAINVITATION.fields_by_name['event'].message_type = res_game_pb2._EVENTGET
 _ARENASTART.fields_by_name['arena'].message_type = res_arena_pb2._ARENA
 _ARENAENDED.fields_by_name['result'].message_type = res_gameres_pb2._GAMEMESSAGE
 

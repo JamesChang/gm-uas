@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_campus_arena.proto',
   package='',
-  serialized_pb='\n\x16res_campus_arena.proto\x1a\x12res_activity.proto\x1a\x0eres_clan.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\x1a\x12res_listbase.proto\"\x8e\x01\n\x0e\x43\x61mpusArenaGet\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x04\x63lan\x18\x02 \x01(\x0b\x32\x10.ClanGetResponse\x12\n\n\x02id\x18\x03 \x01(\r\x12\x15\n\rlogicalGameID\x18\x04 \x01(\r\x12\x17\n\x0flogicalGameMode\x18\x05 \x01(\t\x12\x12\n\x04maps\x18\x07 \x03(\x0b\x32\x04.Map\"\\\n\x13\x43\x61mpusArenaGrouping\x12\x19\n\x05users\x18\x01 \x03(\x0b\x32\n.UserModel\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\n\n\x02id\x18\x03 \x01(\t\x12\x0f\n\x07\x65ventID\x18\x04 \x01(\r\"S\n\x17\x43\x61mpusArenaGroupingList\x12#\n\x05items\x18\x01 \x03(\x0b\x32\x14.CampusArenaGrouping\x12\x13\n\x0bplaceholder\x18\x0f \x01(\r\":\n\x11\x43\x61mpusArena03List\x12%\n\x05items\x18\x01 \x03(\x0b\x32\x16.CampusArena03ListItem\"\xc9\x01\n\x15\x43\x61mpusArena03ListItem\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04mode\x18\x03 \x01(\t\x12\r\n\x05mapid\x18\x04 \x01(\r\x12\x0f\n\x07mapname\x18\x05 \x01(\t\x12\x0e\n\x06mcount\x18\x06 \x01(\t\x12\r\n\x05haspw\x18\x07 \x01(\x08\x12\x10\n\x08leaderid\x18\x08 \x01(\r\x12\x1d\n\x15\x65\x61rly_quit_constraint\x18\t \x01(\x02\x12\x18\n\x10level_constraint\x18\n \x01(\r\"\x91\x01\n\x12\x43\x61mpusArena03Stats\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParams\x12\x0f\n\x07my_rank\x18\x03 \x01(\r\x12\x10\n\x08my_score\x18\x04 \x01(\r\x12\x13\n\x0bmy_position\x18\x05 \x01(\r\"\xdc\x01\n\x16\x43\x61mpusArena03StatsItem\x12\n\n\x02id\x18\x0b \x01(\r\x12\x0c\n\x04name\x18\n \x01(\t\x12\x0c\n\x04rank\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\x05\x12\x0b\n\x03win\x18\x06 \x01(\r\x12\x12\n\nearly_quit\x18\x07 \x01(\r\x12\r\n\x05total\x18\x08 \x01(\r\x12\x10\n\x08win_rate\x18\t \x01(\x02\x12\x12\n\ndoublekill\x18\r \x01(\r\x12\x12\n\ntriplekill\x18\x0e \x01(\r\x12\x12\n\nassistance\x18\x0f \x01(\r\"\xa8\x01\n\x11\x43\x61mpusArena03Home\x12\x11\n\tbulletins\x18\x04 \x03(\t\x12(\n\x07scStats\x18\x05 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12*\n\twar3Stats\x18\x06 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12*\n\tdotaStats\x18\x07 \x03(\x0b\x32\x17.CampusArena03StatsItemB\x12\n\x0eproto.responseH\x02')
+  serialized_pb='\n\x16res_campus_arena.proto\x1a\x12res_activity.proto\x1a\x0eres_clan.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\x1a\x12res_listbase.proto\"\x8e\x01\n\x0e\x43\x61mpusArenaGet\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x1e\n\x04\x63lan\x18\x02 \x01(\x0b\x32\x10.ClanGetResponse\x12\n\n\x02id\x18\x03 \x01(\r\x12\x15\n\rlogicalGameID\x18\x04 \x01(\r\x12\x17\n\x0flogicalGameMode\x18\x05 \x01(\t\x12\x12\n\x04maps\x18\x07 \x03(\x0b\x32\x04.Map\"\\\n\x13\x43\x61mpusArenaGrouping\x12\x19\n\x05users\x18\x01 \x03(\x0b\x32\n.UserModel\x12\r\n\x05\x63ount\x18\x02 \x01(\r\x12\n\n\x02id\x18\x03 \x01(\t\x12\x0f\n\x07\x65ventID\x18\x04 \x01(\r\"S\n\x17\x43\x61mpusArenaGroupingList\x12#\n\x05items\x18\x01 \x03(\x0b\x32\x14.CampusArenaGrouping\x12\x13\n\x0bplaceholder\x18\x0f \x01(\r\"I\n\x11\x43\x61mpusArena03List\x12\r\n\x05stick\x18\x02 \x01(\t\x12%\n\x05items\x18\x01 \x03(\x0b\x32\x16.CampusArena03ListItem\"\xd7\x01\n\x15\x43\x61mpusArena03ListItem\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04mode\x18\x03 \x01(\t\x12\r\n\x05mapid\x18\x04 \x01(\r\x12\x0f\n\x07mapname\x18\x05 \x01(\t\x12\x0e\n\x06mcount\x18\x06 \x01(\t\x12\r\n\x05haspw\x18\x07 \x01(\x08\x12\x10\n\x08leaderid\x18\x08 \x01(\r\x12\x1d\n\x15\x65\x61rly_quit_constraint\x18\t \x01(\x02\x12\x18\n\x10level_constraint\x18\n \x01(\r\x12\x0c\n\x04uuid\x18\x0b \x01(\t\"\x91\x01\n\x12\x43\x61mpusArena03Stats\x12&\n\x05items\x18\x01 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParams\x12\x0f\n\x07my_rank\x18\x03 \x01(\r\x12\x10\n\x08my_score\x18\x04 \x01(\r\x12\x13\n\x0bmy_position\x18\x05 \x01(\r\"\xdc\x01\n\x16\x43\x61mpusArena03StatsItem\x12\n\n\x02id\x18\x0b \x01(\r\x12\x0c\n\x04name\x18\n \x01(\t\x12\x0c\n\x04rank\x18\x01 \x01(\r\x12\r\n\x05score\x18\x02 \x01(\r\x12\r\n\x05level\x18\x03 \x01(\x05\x12\x0b\n\x03win\x18\x06 \x01(\r\x12\x12\n\nearly_quit\x18\x07 \x01(\r\x12\r\n\x05total\x18\x08 \x01(\r\x12\x10\n\x08win_rate\x18\t \x01(\x02\x12\x12\n\ndoublekill\x18\r \x01(\r\x12\x12\n\ntriplekill\x18\x0e \x01(\r\x12\x12\n\nassistance\x18\x0f \x01(\r\"\xa8\x01\n\x11\x43\x61mpusArena03Home\x12\x11\n\tbulletins\x18\x04 \x03(\t\x12(\n\x07scStats\x18\x05 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12*\n\twar3Stats\x18\x06 \x03(\x0b\x32\x17.CampusArena03StatsItem\x12*\n\tdotaStats\x18\x07 \x03(\x0b\x32\x17.CampusArena03StatsItemB\x12\n\x0eproto.responseH\x02')
 
 
 
@@ -170,7 +170,14 @@ _CAMPUSARENA03LIST = descriptor.Descriptor(
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='items', full_name='CampusArena03List.items', index=0,
+      name='stick', full_name='CampusArena03List.stick', index=0,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='items', full_name='CampusArena03List.items', index=1,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -186,7 +193,7 @@ _CAMPUSARENA03LIST = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=438,
-  serialized_end=496,
+  serialized_end=511,
 )
 
 
@@ -267,6 +274,13 @@ _CAMPUSARENA03LISTITEM = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='uuid', full_name='CampusArena03ListItem.uuid', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -276,8 +290,8 @@ _CAMPUSARENA03LISTITEM = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=499,
-  serialized_end=700,
+  serialized_start=514,
+  serialized_end=729,
 )
 
 
@@ -332,8 +346,8 @@ _CAMPUSARENA03STATS = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=703,
-  serialized_end=848,
+  serialized_start=732,
+  serialized_end=877,
 )
 
 
@@ -437,8 +451,8 @@ _CAMPUSARENA03STATSITEM = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=851,
-  serialized_end=1071,
+  serialized_start=880,
+  serialized_end=1100,
 )
 
 
@@ -486,8 +500,8 @@ _CAMPUSARENA03HOME = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1074,
-  serialized_end=1242,
+  serialized_start=1103,
+  serialized_end=1271,
 )
 
 import res_activity_pb2

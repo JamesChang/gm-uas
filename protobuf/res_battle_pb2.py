@@ -10,99 +10,57 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_battle.proto',
   package='',
-  serialized_pb='\n\x10res_battle.proto\x1a\x0eres_user.proto\x1a\x0eres_game.proto\x1a\nutil.proto\"\x9b\x02\n\x06\x42\x61ttle\x12\n\n\x02id\x18\x01 \x01(\r\x12!\n\x0blogicalGame\x18\x02 \x01(\x0b\x32\x0c.LogicalGame\x12#\n\x0cphysicalGame\x18\x03 \x01(\x0b\x32\r.PhysicalGame\x12\x11\n\x03map\x18\x04 \x01(\x0b\x32\x04.Map\x12\x0e\n\x06status\x18\x05 \x01(\t\x12\x1e\n\x07players\x18\x06 \x03(\x0b\x32\r.BattlePlayer\x12#\n\nattributes\x18\x07 \x01(\x0b\x32\x0f.StringDictItem\x12\x11\n\tstartTime\x18\x08 \x01(\r\x12\x0f\n\x07\x65ndTime\x18\t \x01(\r\x12\x0f\n\x07mappath\x18\x10 \x01(\t\x12\x10\n\x08gamepath\x18\x11 \x01(\t\x12\x0e\n\x06hostID\x18\x12 \x01(\r\"p\n\x0c\x42\x61ttlePlayer\x12\x18\n\x04user\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x10\n\x08position\x18\x02 \x01(\r\x12\x0f\n\x07\x66orceid\x18\x03 \x01(\r\x12#\n\nattributes\x18\x04 \x03(\x0b\x32\x0f.StringDictItemB\r\n\tproto.resH\x02')
+  serialized_pb='\n\x10res_battle.proto\x1a\x14res_war3detail.proto\x1a\nutil.proto\"\x81\x01\n\rBattleMessage\x12\x0c\n\x04uuid\x18\x01 \x02(\t\x12\x19\n\x04war3\x18\x02 \x01(\x0b\x32\x0b.War3Detail\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\x11\n\tstartTime\x18\x08 \x01(\r\x12\x11\n\teventName\x18\n \x01(\t\x12\x13\n\x0breplay_file\x18\x0b \x01(\t\"-\n\nBattleList\x12\x1f\n\x07\x62\x61ttles\x18\x01 \x03(\x0b\x32\x0e.BattleMessageB\r\n\tproto.resH\x02')
 
 
 
 
-_BATTLE = descriptor.Descriptor(
-  name='Battle',
-  full_name='Battle',
+_BATTLEMESSAGE = descriptor.Descriptor(
+  name='BattleMessage',
+  full_name='BattleMessage',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='id', full_name='Battle.id', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      name='uuid', full_name='BattleMessage.uuid', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='logicalGame', full_name='Battle.logicalGame', index=1,
+      name='war3', full_name='BattleMessage.war3', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='physicalGame', full_name='Battle.physicalGame', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='map', full_name='Battle.map', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='status', full_name='Battle.status', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='text', full_name='BattleMessage.text', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='players', full_name='Battle.players', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='attributes', full_name='Battle.attributes', index=6,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='startTime', full_name='Battle.startTime', index=7,
+      name='startTime', full_name='BattleMessage.startTime', index=3,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='endTime', full_name='Battle.endTime', index=8,
-      number=9, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='mappath', full_name='Battle.mappath', index=9,
-      number=16, type=9, cpp_type=9, label=1,
+      name='eventName', full_name='BattleMessage.eventName', index=4,
+      number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='gamepath', full_name='Battle.gamepath', index=10,
-      number=17, type=9, cpp_type=9, label=1,
+      name='replay_file', full_name='BattleMessage.replay_file', index=5,
+      number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='hostID', full_name='Battle.hostID', index=11,
-      number=18, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -115,42 +73,21 @@ _BATTLE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=65,
-  serialized_end=348,
+  serialized_start=55,
+  serialized_end=184,
 )
 
 
-_BATTLEPLAYER = descriptor.Descriptor(
-  name='BattlePlayer',
-  full_name='BattlePlayer',
+_BATTLELIST = descriptor.Descriptor(
+  name='BattleList',
+  full_name='BattleList',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='user', full_name='BattlePlayer.user', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='position', full_name='BattlePlayer.position', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='forceid', full_name='BattlePlayer.forceid', index=2,
-      number=3, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='attributes', full_name='BattlePlayer.attributes', index=3,
-      number=4, type=11, cpp_type=10, label=3,
+      name='battles', full_name='BattleList.battles', index=0,
+      number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -164,32 +101,26 @@ _BATTLEPLAYER = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=350,
-  serialized_end=462,
+  serialized_start=186,
+  serialized_end=231,
 )
 
-import res_user_pb2
-import res_game_pb2
+import res_war3detail_pb2
 import util_pb2
 
-_BATTLE.fields_by_name['logicalGame'].message_type = res_game_pb2._LOGICALGAME
-_BATTLE.fields_by_name['physicalGame'].message_type = res_game_pb2._PHYSICALGAME
-_BATTLE.fields_by_name['map'].message_type = res_game_pb2._MAP
-_BATTLE.fields_by_name['players'].message_type = _BATTLEPLAYER
-_BATTLE.fields_by_name['attributes'].message_type = util_pb2._STRINGDICTITEM
-_BATTLEPLAYER.fields_by_name['user'].message_type = res_user_pb2._USERMODEL
-_BATTLEPLAYER.fields_by_name['attributes'].message_type = util_pb2._STRINGDICTITEM
+_BATTLEMESSAGE.fields_by_name['war3'].message_type = res_war3detail_pb2._WAR3DETAIL
+_BATTLELIST.fields_by_name['battles'].message_type = _BATTLEMESSAGE
 
-class Battle(message.Message):
+class BattleMessage(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _BATTLE
+  DESCRIPTOR = _BATTLEMESSAGE
   
-  # @@protoc_insertion_point(class_scope:Battle)
+  # @@protoc_insertion_point(class_scope:BattleMessage)
 
-class BattlePlayer(message.Message):
+class BattleList(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
-  DESCRIPTOR = _BATTLEPLAYER
+  DESCRIPTOR = _BATTLELIST
   
-  # @@protoc_insertion_point(class_scope:BattlePlayer)
+  # @@protoc_insertion_point(class_scope:BattleList)
 
 # @@protoc_insertion_point(module_scope)

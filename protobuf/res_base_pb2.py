@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_base.proto',
   package='',
-  serialized_pb='\n\x0eres_base.proto\x1a\x11res_captcha.proto\x1a\x0eres_user.proto\x1a\x12res_activity.proto\x1a\x0eres_clan.proto\x1a\x0emsg_base.proto\x1a\x0eres_team.proto\x1a\x0fres_party.proto\x1a\x0eres_game.proto\x1a\x16res_campus_arena.proto\x1a\x13res_chatgroup.proto\x1a\x0fres_arena.proto\x1a\x0eres_inet.proto\"\x86\x0b\n\x08Response\x12\x0e\n\x06subMsg\x18\x01 \x01(\t\x12\x0c\n\x04\x63ode\x18\x02 \x02(\r\x12\x1e\n\x06\x65rrors\x18\x03 \x03(\x0b\x32\x0e.ResponseError\x12\x1b\n\x04\x62ool\x18\x34 \x01(\x0b\x32\r.BoolResponse\x12\'\n\ncaptchaNew\x18\x65 \x01(\x0b\x32\x13.CaptchaNewResponse\x12+\n\x0cuserTCPLogin\x18\x66 \x01(\x0b\x32\x15.UserTCPLoginResponse\x12-\n\ruserTCPLogout\x18g \x01(\x0b\x32\x16.UserTCPLogoutResponse\x12)\n\x0buserTCPdrop\x18h \x01(\x0b\x32\x14.UserTCPDropResponse\x12\x1c\n\x07userGet\x18\x8d\x01 \x01(\x0b\x32\n.UserModel\x12$\n\x08userList\x18\x8e\x01 \x01(\x0b\x32\x11.UserListResponse\x12*\n\x0b\x63ollegeList\x18\x8f\x01 \x01(\x0b\x32\x14.CollegeListResponse\x12*\n\x0b\x61\x63tivityGet\x18\xc8\x01 \x01(\x0b\x32\x14.ActivityGetResponse\x12,\n\x0c\x61\x63tivityList\x18\xc9\x01 \x01(\x0b\x32\x15.ActivityListResponse\x12\"\n\x07\x63lanGet\x18\xd2\x01 \x01(\x0b\x32\x10.ClanGetResponse\x12$\n\x08\x63lanList\x18\xdc\x01 \x01(\x0b\x32\x11.ClanListResponse\x12\x1c\n\tmsgRecent\x18\xac\x02 \x01(\x0b\x32\x08.MsgList\x12\"\n\x07teamGet\x18\xb6\x02 \x01(\x0b\x32\x10.TeamGetResponse\x12$\n\x08teamList\x18\xb7\x02 \x01(\x0b\x32\x11.TeamListResponse\x12\x30\n\x12myTeamApplications\x18\xb8\x02 \x01(\x0b\x32\x13.MyTeamApplications\x12$\n\x08partyGet\x18\xde\x02 \x01(\x0b\x32\x11.PartyGetResponse\x12&\n\tpartyList\x18\xdf\x02 \x01(\x0b\x32\x12.PartyListResponse\x12(\n\x0e\x63\x61mpusArenaGet\x18\x90\x03 \x01(\x0b\x32\x0f.CampusArenaGet\x12*\n\x0flogicalGameList\x18\x91\x03 \x01(\x0b\x32\x10.LogicalGameList\x12:\n\x17\x63\x61mpusArenaGroupingList\x18\x92\x03 \x01(\x0b\x32\x18.CampusArenaGroupingList\x12*\n\rca03ArenaList\x18\x93\x03 \x01(\x0b\x32\x12.CampusArena03List\x12\'\n\tca03Stats\x18\x94\x03 \x01(\x0b\x32\x13.CampusArena03Stats\x12)\n\x0c\x63\x61\x30\x33Homepage\x18\x95\x03 \x01(\x0b\x32\x12.CampusArena03Home\x12&\n\x0c\x63hatGroupGet\x18\xc2\x03 \x01(\x0b\x32\x0f.ChatGroupModel\x12&\n\rchatGroupList\x18\xc3\x03 \x01(\x0b\x32\x0e.ChatGroupList\x12$\n\x0cphysicalGame\x18\xcc\x03 \x01(\x0b\x32\r.PhysicalGame\x12,\n\x10physicalGameList\x18\xcd\x03 \x01(\x0b\x32\x11.PhysicalGameList\x12\x1a\n\x07mapList\x18\xce\x03 \x01(\x0b\x32\x08.MapList\x12\x19\n\x08\x61renaGet\x18\xd6\x03 \x01(\x0b\x32\x06.Arena\x12\x1e\n\tarenaList\x18\xd7\x03 \x01(\x0b\x32\n.ArenaList\x12&\n\rinetTableList\x18\xf4\x03 \x01(\x0b\x32\x0e.InetTableList\x12\x1e\n\tinetTable\x18\xf5\x03 \x01(\x0b\x32\n.InetTable\x12\x1e\n\tinetStats\x18\xf6\x03 \x01(\x0b\x32\n.InetStats\";\n\rResponseError\x12\x0c\n\x04\x63ode\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x01(\t\"\x1d\n\x0c\x42oolResponse\x12\r\n\x05value\x18\x01 \x02(\x08\x42\x12\n\x0eproto.responseH\x02')
+  serialized_pb='\n\x0eres_base.proto\x1a\x11res_captcha.proto\x1a\x0eres_user.proto\x1a\x12res_activity.proto\x1a\x0eres_clan.proto\x1a\x0emsg_base.proto\x1a\x0eres_team.proto\x1a\x0fres_party.proto\x1a\x0eres_game.proto\x1a\x16res_campus_arena.proto\x1a\x13res_chatgroup.proto\x1a\x0fres_arena.proto\x1a\x0eres_inet.proto\x1a\x10res_battle.proto\"\x82\x0c\n\x08Response\x12\x0e\n\x06subMsg\x18\x01 \x01(\t\x12\x0c\n\x04\x63ode\x18\x02 \x02(\r\x12\x1e\n\x06\x65rrors\x18\x03 \x03(\x0b\x32\x0e.ResponseError\x12\x1b\n\x04\x62ool\x18\x34 \x01(\x0b\x32\r.BoolResponse\x12$\n\x0bstringValue\x18\x35 \x01(\x0b\x32\x0f.StringResponse\x12\'\n\ncaptchaNew\x18\x65 \x01(\x0b\x32\x13.CaptchaNewResponse\x12+\n\x0cuserTCPLogin\x18\x66 \x01(\x0b\x32\x15.UserTCPLoginResponse\x12-\n\ruserTCPLogout\x18g \x01(\x0b\x32\x16.UserTCPLogoutResponse\x12)\n\x0buserTCPdrop\x18h \x01(\x0b\x32\x14.UserTCPDropResponse\x12\x1c\n\x07userGet\x18\x8d\x01 \x01(\x0b\x32\n.UserModel\x12$\n\x08userList\x18\x8e\x01 \x01(\x0b\x32\x11.UserListResponse\x12*\n\x0b\x63ollegeList\x18\x8f\x01 \x01(\x0b\x32\x14.CollegeListResponse\x12*\n\x0b\x61\x63tivityGet\x18\xc8\x01 \x01(\x0b\x32\x14.ActivityGetResponse\x12,\n\x0c\x61\x63tivityList\x18\xc9\x01 \x01(\x0b\x32\x15.ActivityListResponse\x12\"\n\x07\x63lanGet\x18\xd2\x01 \x01(\x0b\x32\x10.ClanGetResponse\x12$\n\x08\x63lanList\x18\xdc\x01 \x01(\x0b\x32\x11.ClanListResponse\x12\x1c\n\tmsgRecent\x18\xac\x02 \x01(\x0b\x32\x08.MsgList\x12\"\n\x07teamGet\x18\xb6\x02 \x01(\x0b\x32\x10.TeamGetResponse\x12$\n\x08teamList\x18\xb7\x02 \x01(\x0b\x32\x11.TeamListResponse\x12\x30\n\x12myTeamApplications\x18\xb8\x02 \x01(\x0b\x32\x13.MyTeamApplications\x12\x1e\n\x08partyGet\x18\xde\x02 \x01(\x0b\x32\x0b.PartyModel\x12\x1e\n\tpartyList\x18\xdf\x02 \x01(\x0b\x32\n.PartyList\x12(\n\x0e\x63\x61mpusArenaGet\x18\x90\x03 \x01(\x0b\x32\x0f.CampusArenaGet\x12*\n\x0flogicalGameList\x18\x91\x03 \x01(\x0b\x32\x10.LogicalGameList\x12:\n\x17\x63\x61mpusArenaGroupingList\x18\x92\x03 \x01(\x0b\x32\x18.CampusArenaGroupingList\x12*\n\rca03ArenaList\x18\x93\x03 \x01(\x0b\x32\x12.CampusArena03List\x12\'\n\tca03Stats\x18\x94\x03 \x01(\x0b\x32\x13.CampusArena03Stats\x12)\n\x0c\x63\x61\x30\x33Homepage\x18\x95\x03 \x01(\x0b\x32\x12.CampusArena03Home\x12&\n\x0c\x63hatGroupGet\x18\xc2\x03 \x01(\x0b\x32\x0f.ChatGroupModel\x12&\n\rchatGroupList\x18\xc3\x03 \x01(\x0b\x32\x0e.ChatGroupList\x12$\n\x0cphysicalGame\x18\xcc\x03 \x01(\x0b\x32\r.PhysicalGame\x12,\n\x10physicalGameList\x18\xcd\x03 \x01(\x0b\x32\x11.PhysicalGameList\x12\x1a\n\x07mapList\x18\xce\x03 \x01(\x0b\x32\x08.MapList\x12\x1c\n\x08\x65ventGet\x18\xcf\x03 \x01(\x0b\x32\t.EventGet\x12\x19\n\x08\x61renaGet\x18\xd6\x03 \x01(\x0b\x32\x06.Arena\x12\x1e\n\tarenaList\x18\xd7\x03 \x01(\x0b\x32\n.ArenaList\x12&\n\rinetTableList\x18\xf4\x03 \x01(\x0b\x32\x0e.InetTableList\x12\x1e\n\tinetTable\x18\xf5\x03 \x01(\x0b\x32\n.InetTable\x12\x1e\n\tinetStats\x18\xf6\x03 \x01(\x0b\x32\n.InetStats\x12\"\n\tbattleGet\x18\x93\x04 \x01(\x0b\x32\x0e.BattleMessage\x12 \n\nbattleList\x18\x94\x04 \x01(\x0b\x32\x0b.BattleList\";\n\rResponseError\x12\x0c\n\x04\x63ode\x18\x01 \x02(\r\x12\x0c\n\x04\x64\x65sc\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x01(\t\"\x1d\n\x0c\x42oolResponse\x12\r\n\x05value\x18\x01 \x02(\x08\"\x1f\n\x0eStringResponse\x12\r\n\x05value\x18\x01 \x02(\tB\x12\n\x0eproto.responseH\x02')
 
 
 
@@ -51,232 +51,260 @@ _RESPONSE = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='captchaNew', full_name='Response.captchaNew', index=4,
+      name='stringValue', full_name='Response.stringValue', index=4,
+      number=53, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='captchaNew', full_name='Response.captchaNew', index=5,
       number=101, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userTCPLogin', full_name='Response.userTCPLogin', index=5,
+      name='userTCPLogin', full_name='Response.userTCPLogin', index=6,
       number=102, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userTCPLogout', full_name='Response.userTCPLogout', index=6,
+      name='userTCPLogout', full_name='Response.userTCPLogout', index=7,
       number=103, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userTCPdrop', full_name='Response.userTCPdrop', index=7,
+      name='userTCPdrop', full_name='Response.userTCPdrop', index=8,
       number=104, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userGet', full_name='Response.userGet', index=8,
+      name='userGet', full_name='Response.userGet', index=9,
       number=141, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userList', full_name='Response.userList', index=9,
+      name='userList', full_name='Response.userList', index=10,
       number=142, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='collegeList', full_name='Response.collegeList', index=10,
+      name='collegeList', full_name='Response.collegeList', index=11,
       number=143, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='activityGet', full_name='Response.activityGet', index=11,
+      name='activityGet', full_name='Response.activityGet', index=12,
       number=200, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='activityList', full_name='Response.activityList', index=12,
+      name='activityList', full_name='Response.activityList', index=13,
       number=201, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='clanGet', full_name='Response.clanGet', index=13,
+      name='clanGet', full_name='Response.clanGet', index=14,
       number=210, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='clanList', full_name='Response.clanList', index=14,
+      name='clanList', full_name='Response.clanList', index=15,
       number=220, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='msgRecent', full_name='Response.msgRecent', index=15,
+      name='msgRecent', full_name='Response.msgRecent', index=16,
       number=300, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamGet', full_name='Response.teamGet', index=16,
+      name='teamGet', full_name='Response.teamGet', index=17,
       number=310, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamList', full_name='Response.teamList', index=17,
+      name='teamList', full_name='Response.teamList', index=18,
       number=311, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='myTeamApplications', full_name='Response.myTeamApplications', index=18,
+      name='myTeamApplications', full_name='Response.myTeamApplications', index=19,
       number=312, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyGet', full_name='Response.partyGet', index=19,
+      name='partyGet', full_name='Response.partyGet', index=20,
       number=350, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyList', full_name='Response.partyList', index=20,
+      name='partyList', full_name='Response.partyList', index=21,
       number=351, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='campusArenaGet', full_name='Response.campusArenaGet', index=21,
+      name='campusArenaGet', full_name='Response.campusArenaGet', index=22,
       number=400, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='logicalGameList', full_name='Response.logicalGameList', index=22,
+      name='logicalGameList', full_name='Response.logicalGameList', index=23,
       number=401, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='campusArenaGroupingList', full_name='Response.campusArenaGroupingList', index=23,
+      name='campusArenaGroupingList', full_name='Response.campusArenaGroupingList', index=24,
       number=402, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03ArenaList', full_name='Response.ca03ArenaList', index=24,
+      name='ca03ArenaList', full_name='Response.ca03ArenaList', index=25,
       number=403, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03Stats', full_name='Response.ca03Stats', index=25,
+      name='ca03Stats', full_name='Response.ca03Stats', index=26,
       number=404, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03Homepage', full_name='Response.ca03Homepage', index=26,
+      name='ca03Homepage', full_name='Response.ca03Homepage', index=27,
       number=405, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatGroupGet', full_name='Response.chatGroupGet', index=27,
+      name='chatGroupGet', full_name='Response.chatGroupGet', index=28,
       number=450, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatGroupList', full_name='Response.chatGroupList', index=28,
+      name='chatGroupList', full_name='Response.chatGroupList', index=29,
       number=451, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='physicalGame', full_name='Response.physicalGame', index=29,
+      name='physicalGame', full_name='Response.physicalGame', index=30,
       number=460, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='physicalGameList', full_name='Response.physicalGameList', index=30,
+      name='physicalGameList', full_name='Response.physicalGameList', index=31,
       number=461, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='mapList', full_name='Response.mapList', index=31,
+      name='mapList', full_name='Response.mapList', index=32,
       number=462, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaGet', full_name='Response.arenaGet', index=32,
+      name='eventGet', full_name='Response.eventGet', index=33,
+      number=463, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='arenaGet', full_name='Response.arenaGet', index=34,
       number=470, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaList', full_name='Response.arenaList', index=33,
+      name='arenaList', full_name='Response.arenaList', index=35,
       number=471, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='inetTableList', full_name='Response.inetTableList', index=34,
+      name='inetTableList', full_name='Response.inetTableList', index=36,
       number=500, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='inetTable', full_name='Response.inetTable', index=35,
+      name='inetTable', full_name='Response.inetTable', index=37,
       number=501, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='inetStats', full_name='Response.inetStats', index=36,
+      name='inetStats', full_name='Response.inetStats', index=38,
       number=502, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='battleGet', full_name='Response.battleGet', index=39,
+      number=531, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='battleList', full_name='Response.battleList', index=40,
+      number=532, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -290,8 +318,8 @@ _RESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=233,
-  serialized_end=1647,
+  serialized_start=251,
+  serialized_end=1789,
 )
 
 
@@ -332,8 +360,8 @@ _RESPONSEERROR = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1649,
-  serialized_end=1708,
+  serialized_start=1791,
+  serialized_end=1850,
 )
 
 
@@ -360,8 +388,36 @@ _BOOLRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1710,
-  serialized_end=1739,
+  serialized_start=1852,
+  serialized_end=1881,
+)
+
+
+_STRINGRESPONSE = descriptor.Descriptor(
+  name='StringResponse',
+  full_name='StringResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='value', full_name='StringResponse.value', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=1883,
+  serialized_end=1914,
 )
 
 import res_captcha_pb2
@@ -376,9 +432,11 @@ import res_campus_arena_pb2
 import res_chatgroup_pb2
 import res_arena_pb2
 import res_inet_pb2
+import res_battle_pb2
 
 _RESPONSE.fields_by_name['errors'].message_type = _RESPONSEERROR
 _RESPONSE.fields_by_name['bool'].message_type = _BOOLRESPONSE
+_RESPONSE.fields_by_name['stringValue'].message_type = _STRINGRESPONSE
 _RESPONSE.fields_by_name['captchaNew'].message_type = res_captcha_pb2._CAPTCHANEWRESPONSE
 _RESPONSE.fields_by_name['userTCPLogin'].message_type = res_user_pb2._USERTCPLOGINRESPONSE
 _RESPONSE.fields_by_name['userTCPLogout'].message_type = res_user_pb2._USERTCPLOGOUTRESPONSE
@@ -394,8 +452,8 @@ _RESPONSE.fields_by_name['msgRecent'].message_type = msg_base_pb2._MSGLIST
 _RESPONSE.fields_by_name['teamGet'].message_type = res_team_pb2._TEAMGETRESPONSE
 _RESPONSE.fields_by_name['teamList'].message_type = res_team_pb2._TEAMLISTRESPONSE
 _RESPONSE.fields_by_name['myTeamApplications'].message_type = res_team_pb2._MYTEAMAPPLICATIONS
-_RESPONSE.fields_by_name['partyGet'].message_type = res_party_pb2._PARTYGETRESPONSE
-_RESPONSE.fields_by_name['partyList'].message_type = res_party_pb2._PARTYLISTRESPONSE
+_RESPONSE.fields_by_name['partyGet'].message_type = res_party_pb2._PARTYMODEL
+_RESPONSE.fields_by_name['partyList'].message_type = res_party_pb2._PARTYLIST
 _RESPONSE.fields_by_name['campusArenaGet'].message_type = res_campus_arena_pb2._CAMPUSARENAGET
 _RESPONSE.fields_by_name['logicalGameList'].message_type = res_game_pb2._LOGICALGAMELIST
 _RESPONSE.fields_by_name['campusArenaGroupingList'].message_type = res_campus_arena_pb2._CAMPUSARENAGROUPINGLIST
@@ -407,11 +465,14 @@ _RESPONSE.fields_by_name['chatGroupList'].message_type = res_chatgroup_pb2._CHAT
 _RESPONSE.fields_by_name['physicalGame'].message_type = res_game_pb2._PHYSICALGAME
 _RESPONSE.fields_by_name['physicalGameList'].message_type = res_game_pb2._PHYSICALGAMELIST
 _RESPONSE.fields_by_name['mapList'].message_type = res_game_pb2._MAPLIST
+_RESPONSE.fields_by_name['eventGet'].message_type = res_game_pb2._EVENTGET
 _RESPONSE.fields_by_name['arenaGet'].message_type = res_arena_pb2._ARENA
 _RESPONSE.fields_by_name['arenaList'].message_type = res_arena_pb2._ARENALIST
 _RESPONSE.fields_by_name['inetTableList'].message_type = res_inet_pb2._INETTABLELIST
 _RESPONSE.fields_by_name['inetTable'].message_type = res_inet_pb2._INETTABLE
 _RESPONSE.fields_by_name['inetStats'].message_type = res_inet_pb2._INETSTATS
+_RESPONSE.fields_by_name['battleGet'].message_type = res_battle_pb2._BATTLEMESSAGE
+_RESPONSE.fields_by_name['battleList'].message_type = res_battle_pb2._BATTLELIST
 
 class Response(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
@@ -430,5 +491,11 @@ class BoolResponse(message.Message):
   DESCRIPTOR = _BOOLRESPONSE
   
   # @@protoc_insertion_point(class_scope:BoolResponse)
+
+class StringResponse(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _STRINGRESPONSE
+  
+  # @@protoc_insertion_point(class_scope:StringResponse)
 
 # @@protoc_insertion_point(module_scope)

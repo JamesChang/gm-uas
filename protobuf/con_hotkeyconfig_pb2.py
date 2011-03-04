@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='con_hotkeyconfig.proto',
   package='',
-  serialized_pb='\n\x16\x63on_hotkeyconfig.proto\"\xf1\x01\n\x0cHotKeyConfig\x12%\n\x07IGM_Key\x18\x01 \x01(\x0b\x32\x14.HotKeyConfig.HotKey\x12%\n\x07hotkeys\x18\x02 \x03(\x0b\x32\x14.HotKeyConfig.HotKey\x12\x14\n\x0cshowLifeLine\x18\x03 \x01(\x05\x12\x15\n\rwinKeyEnabled\x18\x04 \x01(\x08\x1a\x66\n\x06HotKey\x12\x13\n\x0boriginalKey\x18\x01 \x02(\x05\x12\x11\n\tmodifyKey\x18\x02 \x01(\x05\x12\x11\n\tshiftDown\x18\x03 \x01(\x05\x12\x10\n\x08\x63trlDown\x18\x04 \x01(\x05\x12\x0f\n\x07\x61ltDown\x18\x05 \x01(\x05\x42\x10\n\x0cproto.configH\x02')
+  serialized_pb='\n\x16\x63on_hotkeyconfig.proto\"\xf1\x01\n\x0cHotKeyConfig\x12%\n\x07IGM_Key\x18\x01 \x01(\x0b\x32\x14.HotKeyConfig.HotKey\x12%\n\x07hotkeys\x18\x02 \x03(\x0b\x32\x14.HotKeyConfig.HotKey\x12\x14\n\x0cshowLifeLine\x18\x03 \x01(\x05\x12\x15\n\rwinKeyEnabled\x18\x04 \x01(\x08\x1a\x66\n\x06HotKey\x12\x13\n\x0boriginalKey\x18\x01 \x01(\x05\x12\x11\n\tmodifyKey\x18\x02 \x01(\x05\x12\x11\n\tshiftDown\x18\x03 \x01(\x05\x12\x10\n\x08\x63trlDown\x18\x04 \x01(\x05\x12\x0f\n\x07\x61ltDown\x18\x05 \x01(\x05\x42\x10\n\x0cproto.configH\x02')
 
 
 
@@ -24,7 +24,7 @@ _HOTKEYCONFIG_HOTKEY = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='originalKey', full_name='HotKeyConfig.HotKey.originalKey', index=0,
-      number=1, type=5, cpp_type=1, label=2,
+      number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

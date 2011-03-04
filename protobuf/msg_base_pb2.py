@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='msg_base.proto',
   package='',
-  serialized_pb='\n\x0emsg_base.proto\x1a\x0emsg_user.proto\x1a\x0emsg_clan.proto\x1a\x0emsg_team.proto\x1a\x0emsg_chat.proto\x1a\x0fmsg_party.proto\x1a\x13msg_chatgroup.proto\x1a\x0fmsg_arena.proto\x1a\x16msg_campus_arena.proto\x1a\x0eres_inet.proto\"\xd1\x18\n\x03Msg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04\x63ode\x18\x02 \x02(\r\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\r\x12\x0e\n\x06subMsg\x18\x05 \x01(\t\x12\x0e\n\x06\x61nswer\x18\x06 \x01(\t\x12\x15\n\rlast_modified\x18\x07 \x01(\r\x12\x16\n\x0e\x63\x61nAnswerYesNo\x18\x08 \x01(\x08\x12\x0c\n\x04uuid\x18\t \x01(\t\x12\r\n\x05\x66lagA\x18\n \x01(\x08\x12\r\n\x05\x66lagP\x18\x0b \x01(\x08\x12\r\n\x05\x66lagU\x18\x0c \x01(\x08\x12\x0f\n\x07\x65xpires\x18\x0e \x01(\x07\x12\x0c\n\x04\x64\x61ta\x18\x0f \x01(\t\x12\x11\n\tuniqueKey\x18\x13 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x10 \x01(\t\x12\x13\n\x0bsubcategory\x18\x14 \x01(\t\x12\x1f\n\nstringData\x18\x1f \x01(\x0b\x32\x0b.StringData\x12 \n\x07whisper\x18( \x01(\x0b\x32\x0f.WhisperMessage\x12\x1d\n\tgroupChat\x18) \x01(\x0b\x32\n.GroupChat\x12*\n\x0c\x62\x65\x63\x61meFriend\x18\x32 \x01(\x0b\x32\x14.BecameFriendMessage\x12\x38\n\x13\x66riendStatusChanged\x18\x33 \x01(\x0b\x32\x1b.FriendStatusChangedMessage\x12\x34\n\x11\x66riendDataChanged\x18\x34 \x01(\x0b\x32\x19.FriendDataChangedMessage\x12&\n\nmakeFriend\x18\x35 \x01(\x0b\x32\x12.MakeFriendMessage\x12\x36\n\x12\x61lertValidateEmail\x18\x37 \x01(\x0b\x32\x1a.AlertValidateEmailMessage\x12#\n\x0cuserAccepted\x18\x38 \x01(\x0b\x32\r.UserAccepted\x12#\n\x0cuserDeclined\x18\x39 \x01(\x0b\x32\r.UserDeclined\x12/\n\x12makeFriendAccepted\x18: \x01(\x0b\x32\x13.MakeFriendAccepted\x12/\n\x12makeFriendDeclined\x18; \x01(\x0b\x32\x13.MakeFriendDeclined\x12\x38\n\x14\x61lertUserFillProfile\x18< \x01(\x0b\x32\x1a.AlertValidateEmailMessage\x12.\n\x10notFriendAnyMore\x18= \x01(\x0b\x32\x14.BecameFriendMessage\x12\x32\n\x10\x61lertJoiningClan\x18\x64 \x01(\x0b\x32\x18.AlertJoiningClanMessage\x12?\n\x16teamJoiningApplication\x18\x96\x01 \x01(\x0b\x32\x1e.TeamJoiningApplicationMessage\x12 \n\nteamJoined\x18\x97\x01 \x01(\x0b\x32\x0b.TeamJoined\x12 \n\nteamLeaved\x18\x98\x01 \x01(\x0b\x32\x0b.TeamLeaved\x12(\n\x0euserJoinedTeam\x18\x99\x01 \x01(\x0b\x32\x0f.UserJoinedTeam\x12(\n\x0euserLeavedTeam\x18\x9a\x01 \x01(\x0b\x32\x0f.UserLeavedTeam\x12:\n\x17teamMemberStatusUpdated\x18\x9b\x01 \x01(\x0b\x32\x18.TeamMemberStatusUpdated\x12(\n\x0eteamInvitation\x18\x9c\x01 \x01(\x0b\x32\x0f.TeamInvitation\x12H\n\x1eteamJoiningApplicationAccepted\x18\x9d\x01 \x01(\x0b\x32\x1f.TeamJoiningApplicationAccepted\x12H\n\x1eteamJoiningApplicationDeclined\x18\x9e\x01 \x01(\x0b\x32\x1f.TeamJoiningApplicationDeclined\x12&\n\rteamDisbanded\x18\x9f\x01 \x01(\x0b\x32\x0e.TeamDisbanded\x12.\n\x11teamLeaderChanged\x18\xa0\x01 \x01(\x0b\x32\x12.TeamLeaderChanged\x12\"\n\x0bpartyJoined\x18\xc8\x01 \x01(\x0b\x32\x0c.PartyJoined\x12\"\n\x0bpartyLeaved\x18\xc9\x01 \x01(\x0b\x32\x0c.PartyLeaved\x12*\n\x0fuserJoinedParty\x18\xca\x01 \x01(\x0b\x32\x10.UserJoinedParty\x12*\n\x0fuserLeavedParty\x18\xcb\x01 \x01(\x0b\x32\x10.UserLeavedParty\x12<\n\x18partyMemberStatusUpdated\x18\xcc\x01 \x01(\x0b\x32\x19.PartyMemberStatusUpdated\x12*\n\x0fpartyInvitation\x18\xcd\x01 \x01(\x0b\x32\x10.PartyInvitation\x12:\n\x17partyInvitationDeclined\x18\xce\x01 \x01(\x0b\x32\x18.PartyInvitationDeclined\x12\x30\n\x12partyLeaderChanged\x18\xcf\x01 \x01(\x0b\x32\x13.PartyLeaderChanged\x12*\n\x0f\x63hatGroupJoined\x18\xfb\x01 \x01(\x0b\x32\x10.ChatGroupJoined\x12*\n\x0f\x63hatGroupLeaved\x18\xfc\x01 \x01(\x0b\x32\x10.ChatGroupLeaved\x12\x32\n\x13userJoinedChatGroup\x18\xfd\x01 \x01(\x0b\x32\x14.UserJoinedChatGroup\x12\x32\n\x13userLeavedChatGroup\x18\xfe\x01 \x01(\x0b\x32\x14.UserLeavedChatGroup\x12\x38\n\x16\x63hatGroupMemberUpdated\x18\xff\x01 \x01(\x0b\x32\x17.ChatGroupMemberUpdated\x12\x33\n\x17\x61renaCreatedInChatGroup\x18\x80\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\x33\n\x17\x61renaRemovedInChatGroup\x18\x81\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\x33\n\x17\x61renaUpdatedInChatGroup\x18\x82\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\"\n\x0b\x61renaJoined\x18\xac\x02 \x01(\x0b\x32\x0c.ArenaJoined\x12\"\n\x0b\x61renaLeaved\x18\xad\x02 \x01(\x0b\x32\x0c.ArenaLeaved\x12*\n\x0fuserJoinedArena\x18\xae\x02 \x01(\x0b\x32\x10.UserJoinedArena\x12*\n\x0fuserLeavedArena\x18\xaf\x02 \x01(\x0b\x32\x10.UserLeavedArena\x12\x30\n\x12\x61renaMemberUpdated\x18\xb0\x02 \x01(\x0b\x32\x13.ArenaMemberUpdated\x12*\n\x0f\x61renaInvitation\x18\xb1\x02 \x01(\x0b\x32\x10.ArenaInvitation\x12:\n\x17\x61renaForceStatusUpdated\x18\xb2\x02 \x01(\x0b\x32\x18.ArenaForceStatusUpdated\x12 \n\narenaStart\x18\xb3\x02 \x01(\x0b\x32\x0b.ArenaStart\x12\x30\n\x12\x61renaStatusUpdated\x18\xb4\x02 \x01(\x0b\x32\x13.ArenaStatusUpdated\x12 \n\narenaEnded\x18\xb5\x02 \x01(\x0b\x32\x0b.ArenaEnded\x12>\n\x19\x61renaUserAttributeUpdated\x18\xb6\x02 \x01(\x0b\x32\x1a.ArenaUserAttributeUpdated\x12\x30\n\x12\x61renaLeaderChanged\x18\xb7\x02 \x01(\x0b\x32\x13.ArenaLeaderChanged\x12\x34\n\x14\x61renaSlotLockUpdated\x18\xb8\x02 \x01(\x0b\x32\x15.ArenaSlotLockUpdated\x12(\n\x15joinedCaGroupingQueue\x18\xde\x02 \x01(\x0b\x32\x08.CaQueue\x12(\n\x15leavedCaGroupingQueue\x18\xdf\x02 \x01(\x0b\x32\x08.CaQueue\x12&\n\x13joinedCaBattleQueue\x18\xe0\x02 \x01(\x0b\x32\x08.CaQueue\x12&\n\x13leavedCaBattleQueue\x18\xe1\x02 \x01(\x0b\x32\x08.CaQueue\x12\'\n\x12inetcafePublicChat\x18\xf3\x02 \x01(\x0b\x32\n.GroupChat\x12)\n\x14inetcafeTableUpdated\x18\xf4\x02 \x01(\x0b\x32\n.InetTable\"\x1a\n\nStringData\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"4\n\x07MsgList\x12\x16\n\x08messages\x18\x01 \x03(\x0b\x32\x04.Msg\x12\x11\n\tlast_read\x18\x02 \x01(\rB\r\n\tproto.msgH\x02')
+  serialized_pb='\n\x0emsg_base.proto\x1a\x0emsg_user.proto\x1a\x0emsg_clan.proto\x1a\x0emsg_team.proto\x1a\x0emsg_chat.proto\x1a\x0fmsg_party.proto\x1a\x13msg_chatgroup.proto\x1a\x0fmsg_arena.proto\x1a\x16msg_campus_arena.proto\x1a\x0eres_inet.proto\x1a\x0fmsg_alert.proto\"\xb8\x1a\n\x03Msg\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04\x63ode\x18\x02 \x02(\r\x12\x0c\n\x04text\x18\x03 \x01(\t\x12\x0b\n\x03ttl\x18\x04 \x01(\r\x12\x0e\n\x06subMsg\x18\x05 \x01(\t\x12\x0e\n\x06\x61nswer\x18\x06 \x01(\t\x12\x15\n\rlast_modified\x18\x07 \x01(\r\x12\x16\n\x0e\x63\x61nAnswerYesNo\x18\x08 \x01(\x08\x12\x0c\n\x04uuid\x18\t \x01(\t\x12\r\n\x05\x66lagA\x18\n \x01(\x08\x12\r\n\x05\x66lagP\x18\x0b \x01(\x08\x12\r\n\x05\x66lagU\x18\x0c \x01(\x08\x12\x0f\n\x07\x65xpires\x18\x0e \x01(\x07\x12\x0c\n\x04\x64\x61ta\x18\x0f \x01(\t\x12\x11\n\tuniqueKey\x18\x13 \x01(\t\x12\x10\n\x08\x63\x61tegory\x18\x10 \x01(\t\x12\x13\n\x0bsubcategory\x18\x14 \x01(\t\x12\x1f\n\nstringData\x18\x1f \x01(\x0b\x32\x0b.StringData\x12 \n\x07whisper\x18( \x01(\x0b\x32\x0f.WhisperMessage\x12\x1d\n\tgroupChat\x18) \x01(\x0b\x32\n.GroupChat\x12*\n\x0c\x62\x65\x63\x61meFriend\x18\x32 \x01(\x0b\x32\x14.BecameFriendMessage\x12\x38\n\x13\x66riendStatusChanged\x18\x33 \x01(\x0b\x32\x1b.FriendStatusChangedMessage\x12\x34\n\x11\x66riendDataChanged\x18\x34 \x01(\x0b\x32\x19.FriendDataChangedMessage\x12&\n\nmakeFriend\x18\x35 \x01(\x0b\x32\x12.MakeFriendMessage\x12\x36\n\x12\x61lertValidateEmail\x18\x37 \x01(\x0b\x32\x1a.AlertValidateEmailMessage\x12#\n\x0cuserAccepted\x18\x38 \x01(\x0b\x32\r.UserAccepted\x12#\n\x0cuserDeclined\x18\x39 \x01(\x0b\x32\r.UserDeclined\x12/\n\x12makeFriendAccepted\x18: \x01(\x0b\x32\x13.MakeFriendAccepted\x12/\n\x12makeFriendDeclined\x18; \x01(\x0b\x32\x13.MakeFriendDeclined\x12\x38\n\x14\x61lertUserFillProfile\x18< \x01(\x0b\x32\x1a.AlertValidateEmailMessage\x12.\n\x10notFriendAnyMore\x18= \x01(\x0b\x32\x14.BecameFriendMessage\x12+\n\x10userStatusUpdate\x18> \x01(\x0b\x32\x11.UserStatusUpdate\x12\x32\n\x10\x61lertJoiningClan\x18\x64 \x01(\x0b\x32\x18.AlertJoiningClanMessage\x12?\n\x16teamJoiningApplication\x18\x96\x01 \x01(\x0b\x32\x1e.TeamJoiningApplicationMessage\x12 \n\nteamJoined\x18\x97\x01 \x01(\x0b\x32\x0b.TeamJoined\x12 \n\nteamLeaved\x18\x98\x01 \x01(\x0b\x32\x0b.TeamLeaved\x12(\n\x0euserJoinedTeam\x18\x99\x01 \x01(\x0b\x32\x0f.UserJoinedTeam\x12(\n\x0euserLeavedTeam\x18\x9a\x01 \x01(\x0b\x32\x0f.UserLeavedTeam\x12:\n\x17teamMemberStatusUpdated\x18\x9b\x01 \x01(\x0b\x32\x18.TeamMemberStatusUpdated\x12(\n\x0eteamInvitation\x18\x9c\x01 \x01(\x0b\x32\x0f.TeamInvitation\x12H\n\x1eteamJoiningApplicationAccepted\x18\x9d\x01 \x01(\x0b\x32\x1f.TeamJoiningApplicationAccepted\x12H\n\x1eteamJoiningApplicationDeclined\x18\x9e\x01 \x01(\x0b\x32\x1f.TeamJoiningApplicationDeclined\x12&\n\rteamDisbanded\x18\x9f\x01 \x01(\x0b\x32\x0e.TeamDisbanded\x12.\n\x11teamLeaderChanged\x18\xa0\x01 \x01(\x0b\x32\x12.TeamLeaderChanged\x12\"\n\x0bpartyJoined\x18\xc8\x01 \x01(\x0b\x32\x0c.PartyJoined\x12\"\n\x0bpartyLeaved\x18\xc9\x01 \x01(\x0b\x32\x0c.PartyLeaved\x12*\n\x0fuserJoinedParty\x18\xca\x01 \x01(\x0b\x32\x10.UserJoinedParty\x12*\n\x0fuserLeavedParty\x18\xcb\x01 \x01(\x0b\x32\x10.UserLeavedParty\x12<\n\x18partyMemberStatusUpdated\x18\xcc\x01 \x01(\x0b\x32\x19.PartyMemberStatusUpdated\x12*\n\x0fpartyInvitation\x18\xcd\x01 \x01(\x0b\x32\x10.PartyInvitation\x12:\n\x17partyInvitationDeclined\x18\xce\x01 \x01(\x0b\x32\x18.PartyInvitationDeclined\x12\x30\n\x12partyLeaderChanged\x18\xcf\x01 \x01(\x0b\x32\x13.PartyLeaderChanged\x12*\n\x0f\x65ventInvitation\x18\xd0\x01 \x01(\x0b\x32\x10.EventInvitation\x12:\n\x17\x65ventInvitationDeclined\x18\xd1\x01 \x01(\x0b\x32\x18.EventInvitationDeclined\x12*\n\x0f\x63hatGroupJoined\x18\xfb\x01 \x01(\x0b\x32\x10.ChatGroupJoined\x12*\n\x0f\x63hatGroupLeaved\x18\xfc\x01 \x01(\x0b\x32\x10.ChatGroupLeaved\x12\x32\n\x13userJoinedChatGroup\x18\xfd\x01 \x01(\x0b\x32\x14.UserJoinedChatGroup\x12\x32\n\x13userLeavedChatGroup\x18\xfe\x01 \x01(\x0b\x32\x14.UserLeavedChatGroup\x12\x38\n\x16\x63hatGroupMemberUpdated\x18\xff\x01 \x01(\x0b\x32\x17.ChatGroupMemberUpdated\x12\x33\n\x17\x61renaCreatedInChatGroup\x18\x80\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\x33\n\x17\x61renaRemovedInChatGroup\x18\x81\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\x33\n\x17\x61renaUpdatedInChatGroup\x18\x82\x02 \x01(\x0b\x32\x11.ArenaInChatGroup\x12\"\n\x0b\x61renaJoined\x18\xac\x02 \x01(\x0b\x32\x0c.ArenaJoined\x12\"\n\x0b\x61renaLeaved\x18\xad\x02 \x01(\x0b\x32\x0c.ArenaLeaved\x12*\n\x0fuserJoinedArena\x18\xae\x02 \x01(\x0b\x32\x10.UserJoinedArena\x12*\n\x0fuserLeavedArena\x18\xaf\x02 \x01(\x0b\x32\x10.UserLeavedArena\x12\x30\n\x12\x61renaMemberUpdated\x18\xb0\x02 \x01(\x0b\x32\x13.ArenaMemberUpdated\x12*\n\x0f\x61renaInvitation\x18\xb1\x02 \x01(\x0b\x32\x10.ArenaInvitation\x12:\n\x17\x61renaForceStatusUpdated\x18\xb2\x02 \x01(\x0b\x32\x18.ArenaForceStatusUpdated\x12 \n\narenaStart\x18\xb3\x02 \x01(\x0b\x32\x0b.ArenaStart\x12\x30\n\x12\x61renaStatusUpdated\x18\xb4\x02 \x01(\x0b\x32\x13.ArenaStatusUpdated\x12 \n\narenaEnded\x18\xb5\x02 \x01(\x0b\x32\x0b.ArenaEnded\x12>\n\x19\x61renaUserAttributeUpdated\x18\xb6\x02 \x01(\x0b\x32\x1a.ArenaUserAttributeUpdated\x12\x30\n\x12\x61renaLeaderChanged\x18\xb7\x02 \x01(\x0b\x32\x13.ArenaLeaderChanged\x12\x34\n\x14\x61renaSlotLockUpdated\x18\xb8\x02 \x01(\x0b\x32\x15.ArenaSlotLockUpdated\x12(\n\x15joinedCaGroupingQueue\x18\xde\x02 \x01(\x0b\x32\x08.CaQueue\x12(\n\x15leavedCaGroupingQueue\x18\xdf\x02 \x01(\x0b\x32\x08.CaQueue\x12&\n\x13joinedCaBattleQueue\x18\xe0\x02 \x01(\x0b\x32\x08.CaQueue\x12&\n\x13leavedCaBattleQueue\x18\xe1\x02 \x01(\x0b\x32\x08.CaQueue\x12\'\n\x12inetcafePublicChat\x18\xf3\x02 \x01(\x0b\x32\n.GroupChat\x12)\n\x14inetcafeTableUpdated\x18\xf4\x02 \x01(\x0b\x32\n.InetTable\x12\x1d\n\x05\x61lert\x18\x91\x03 \x01(\x0b\x32\r.AlertMessage\x12\x31\n\x0fgameResultAlert\x18\x92\x03 \x01(\x0b\x32\x17.GameResultAlertMessage\"\x1a\n\nStringData\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\"4\n\x07MsgList\x12\x16\n\x08messages\x18\x01 \x03(\x0b\x32\x04.Msg\x12\x11\n\tlast_read\x18\x02 \x01(\rB\r\n\tproto.msgH\x02')
 
 
 
@@ -240,330 +240,365 @@ _MSG = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='alertJoiningClan', full_name='Msg.alertJoiningClan', index=31,
+      name='userStatusUpdate', full_name='Msg.userStatusUpdate', index=31,
+      number=62, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='alertJoiningClan', full_name='Msg.alertJoiningClan', index=32,
       number=100, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamJoiningApplication', full_name='Msg.teamJoiningApplication', index=32,
+      name='teamJoiningApplication', full_name='Msg.teamJoiningApplication', index=33,
       number=150, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamJoined', full_name='Msg.teamJoined', index=33,
+      name='teamJoined', full_name='Msg.teamJoined', index=34,
       number=151, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamLeaved', full_name='Msg.teamLeaved', index=34,
+      name='teamLeaved', full_name='Msg.teamLeaved', index=35,
       number=152, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userJoinedTeam', full_name='Msg.userJoinedTeam', index=35,
+      name='userJoinedTeam', full_name='Msg.userJoinedTeam', index=36,
       number=153, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userLeavedTeam', full_name='Msg.userLeavedTeam', index=36,
+      name='userLeavedTeam', full_name='Msg.userLeavedTeam', index=37,
       number=154, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamMemberStatusUpdated', full_name='Msg.teamMemberStatusUpdated', index=37,
+      name='teamMemberStatusUpdated', full_name='Msg.teamMemberStatusUpdated', index=38,
       number=155, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamInvitation', full_name='Msg.teamInvitation', index=38,
+      name='teamInvitation', full_name='Msg.teamInvitation', index=39,
       number=156, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamJoiningApplicationAccepted', full_name='Msg.teamJoiningApplicationAccepted', index=39,
+      name='teamJoiningApplicationAccepted', full_name='Msg.teamJoiningApplicationAccepted', index=40,
       number=157, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamJoiningApplicationDeclined', full_name='Msg.teamJoiningApplicationDeclined', index=40,
+      name='teamJoiningApplicationDeclined', full_name='Msg.teamJoiningApplicationDeclined', index=41,
       number=158, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamDisbanded', full_name='Msg.teamDisbanded', index=41,
+      name='teamDisbanded', full_name='Msg.teamDisbanded', index=42,
       number=159, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='teamLeaderChanged', full_name='Msg.teamLeaderChanged', index=42,
+      name='teamLeaderChanged', full_name='Msg.teamLeaderChanged', index=43,
       number=160, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyJoined', full_name='Msg.partyJoined', index=43,
+      name='partyJoined', full_name='Msg.partyJoined', index=44,
       number=200, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyLeaved', full_name='Msg.partyLeaved', index=44,
+      name='partyLeaved', full_name='Msg.partyLeaved', index=45,
       number=201, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userJoinedParty', full_name='Msg.userJoinedParty', index=45,
+      name='userJoinedParty', full_name='Msg.userJoinedParty', index=46,
       number=202, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userLeavedParty', full_name='Msg.userLeavedParty', index=46,
+      name='userLeavedParty', full_name='Msg.userLeavedParty', index=47,
       number=203, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyMemberStatusUpdated', full_name='Msg.partyMemberStatusUpdated', index=47,
+      name='partyMemberStatusUpdated', full_name='Msg.partyMemberStatusUpdated', index=48,
       number=204, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyInvitation', full_name='Msg.partyInvitation', index=48,
+      name='partyInvitation', full_name='Msg.partyInvitation', index=49,
       number=205, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyInvitationDeclined', full_name='Msg.partyInvitationDeclined', index=49,
+      name='partyInvitationDeclined', full_name='Msg.partyInvitationDeclined', index=50,
       number=206, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='partyLeaderChanged', full_name='Msg.partyLeaderChanged', index=50,
+      name='partyLeaderChanged', full_name='Msg.partyLeaderChanged', index=51,
       number=207, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatGroupJoined', full_name='Msg.chatGroupJoined', index=51,
+      name='eventInvitation', full_name='Msg.eventInvitation', index=52,
+      number=208, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='eventInvitationDeclined', full_name='Msg.eventInvitationDeclined', index=53,
+      number=209, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='chatGroupJoined', full_name='Msg.chatGroupJoined', index=54,
       number=251, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatGroupLeaved', full_name='Msg.chatGroupLeaved', index=52,
+      name='chatGroupLeaved', full_name='Msg.chatGroupLeaved', index=55,
       number=252, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userJoinedChatGroup', full_name='Msg.userJoinedChatGroup', index=53,
+      name='userJoinedChatGroup', full_name='Msg.userJoinedChatGroup', index=56,
       number=253, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userLeavedChatGroup', full_name='Msg.userLeavedChatGroup', index=54,
+      name='userLeavedChatGroup', full_name='Msg.userLeavedChatGroup', index=57,
       number=254, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='chatGroupMemberUpdated', full_name='Msg.chatGroupMemberUpdated', index=55,
+      name='chatGroupMemberUpdated', full_name='Msg.chatGroupMemberUpdated', index=58,
       number=255, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaCreatedInChatGroup', full_name='Msg.arenaCreatedInChatGroup', index=56,
+      name='arenaCreatedInChatGroup', full_name='Msg.arenaCreatedInChatGroup', index=59,
       number=256, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaRemovedInChatGroup', full_name='Msg.arenaRemovedInChatGroup', index=57,
+      name='arenaRemovedInChatGroup', full_name='Msg.arenaRemovedInChatGroup', index=60,
       number=257, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaUpdatedInChatGroup', full_name='Msg.arenaUpdatedInChatGroup', index=58,
+      name='arenaUpdatedInChatGroup', full_name='Msg.arenaUpdatedInChatGroup', index=61,
       number=258, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaJoined', full_name='Msg.arenaJoined', index=59,
+      name='arenaJoined', full_name='Msg.arenaJoined', index=62,
       number=300, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaLeaved', full_name='Msg.arenaLeaved', index=60,
+      name='arenaLeaved', full_name='Msg.arenaLeaved', index=63,
       number=301, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userJoinedArena', full_name='Msg.userJoinedArena', index=61,
+      name='userJoinedArena', full_name='Msg.userJoinedArena', index=64,
       number=302, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userLeavedArena', full_name='Msg.userLeavedArena', index=62,
+      name='userLeavedArena', full_name='Msg.userLeavedArena', index=65,
       number=303, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaMemberUpdated', full_name='Msg.arenaMemberUpdated', index=63,
+      name='arenaMemberUpdated', full_name='Msg.arenaMemberUpdated', index=66,
       number=304, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaInvitation', full_name='Msg.arenaInvitation', index=64,
+      name='arenaInvitation', full_name='Msg.arenaInvitation', index=67,
       number=305, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaForceStatusUpdated', full_name='Msg.arenaForceStatusUpdated', index=65,
+      name='arenaForceStatusUpdated', full_name='Msg.arenaForceStatusUpdated', index=68,
       number=306, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaStart', full_name='Msg.arenaStart', index=66,
+      name='arenaStart', full_name='Msg.arenaStart', index=69,
       number=307, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaStatusUpdated', full_name='Msg.arenaStatusUpdated', index=67,
+      name='arenaStatusUpdated', full_name='Msg.arenaStatusUpdated', index=70,
       number=308, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaEnded', full_name='Msg.arenaEnded', index=68,
+      name='arenaEnded', full_name='Msg.arenaEnded', index=71,
       number=309, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaUserAttributeUpdated', full_name='Msg.arenaUserAttributeUpdated', index=69,
+      name='arenaUserAttributeUpdated', full_name='Msg.arenaUserAttributeUpdated', index=72,
       number=310, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaLeaderChanged', full_name='Msg.arenaLeaderChanged', index=70,
+      name='arenaLeaderChanged', full_name='Msg.arenaLeaderChanged', index=73,
       number=311, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='arenaSlotLockUpdated', full_name='Msg.arenaSlotLockUpdated', index=71,
+      name='arenaSlotLockUpdated', full_name='Msg.arenaSlotLockUpdated', index=74,
       number=312, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='joinedCaGroupingQueue', full_name='Msg.joinedCaGroupingQueue', index=72,
+      name='joinedCaGroupingQueue', full_name='Msg.joinedCaGroupingQueue', index=75,
       number=350, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='leavedCaGroupingQueue', full_name='Msg.leavedCaGroupingQueue', index=73,
+      name='leavedCaGroupingQueue', full_name='Msg.leavedCaGroupingQueue', index=76,
       number=351, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='joinedCaBattleQueue', full_name='Msg.joinedCaBattleQueue', index=74,
+      name='joinedCaBattleQueue', full_name='Msg.joinedCaBattleQueue', index=77,
       number=352, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='leavedCaBattleQueue', full_name='Msg.leavedCaBattleQueue', index=75,
+      name='leavedCaBattleQueue', full_name='Msg.leavedCaBattleQueue', index=78,
       number=353, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='inetcafePublicChat', full_name='Msg.inetcafePublicChat', index=76,
+      name='inetcafePublicChat', full_name='Msg.inetcafePublicChat', index=79,
       number=371, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='inetcafeTableUpdated', full_name='Msg.inetcafeTableUpdated', index=77,
+      name='inetcafeTableUpdated', full_name='Msg.inetcafeTableUpdated', index=80,
       number=372, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='alert', full_name='Msg.alert', index=81,
+      number=401, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='gameResultAlert', full_name='Msg.gameResultAlert', index=82,
+      number=402, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -577,8 +612,8 @@ _MSG = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=178,
-  serialized_end=3331,
+  serialized_start=195,
+  serialized_end=3579,
 )
 
 
@@ -605,8 +640,8 @@ _STRINGDATA = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=3333,
-  serialized_end=3359,
+  serialized_start=3581,
+  serialized_end=3607,
 )
 
 
@@ -640,8 +675,8 @@ _MSGLIST = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=3361,
-  serialized_end=3413,
+  serialized_start=3609,
+  serialized_end=3661,
 )
 
 import msg_user_pb2
@@ -653,6 +688,7 @@ import msg_chatgroup_pb2
 import msg_arena_pb2
 import msg_campus_arena_pb2
 import res_inet_pb2
+import msg_alert_pb2
 
 _MSG.fields_by_name['stringData'].message_type = _STRINGDATA
 _MSG.fields_by_name['whisper'].message_type = msg_user_pb2._WHISPERMESSAGE
@@ -668,6 +704,7 @@ _MSG.fields_by_name['makeFriendAccepted'].message_type = msg_user_pb2._MAKEFRIEN
 _MSG.fields_by_name['makeFriendDeclined'].message_type = msg_user_pb2._MAKEFRIENDDECLINED
 _MSG.fields_by_name['alertUserFillProfile'].message_type = msg_user_pb2._ALERTVALIDATEEMAILMESSAGE
 _MSG.fields_by_name['notFriendAnyMore'].message_type = msg_user_pb2._BECAMEFRIENDMESSAGE
+_MSG.fields_by_name['userStatusUpdate'].message_type = msg_user_pb2._USERSTATUSUPDATE
 _MSG.fields_by_name['alertJoiningClan'].message_type = msg_clan_pb2._ALERTJOININGCLANMESSAGE
 _MSG.fields_by_name['teamJoiningApplication'].message_type = msg_team_pb2._TEAMJOININGAPPLICATIONMESSAGE
 _MSG.fields_by_name['teamJoined'].message_type = msg_team_pb2._TEAMJOINED
@@ -688,6 +725,8 @@ _MSG.fields_by_name['partyMemberStatusUpdated'].message_type = msg_party_pb2._PA
 _MSG.fields_by_name['partyInvitation'].message_type = msg_party_pb2._PARTYINVITATION
 _MSG.fields_by_name['partyInvitationDeclined'].message_type = msg_party_pb2._PARTYINVITATIONDECLINED
 _MSG.fields_by_name['partyLeaderChanged'].message_type = msg_party_pb2._PARTYLEADERCHANGED
+_MSG.fields_by_name['eventInvitation'].message_type = msg_party_pb2._EVENTINVITATION
+_MSG.fields_by_name['eventInvitationDeclined'].message_type = msg_party_pb2._EVENTINVITATIONDECLINED
 _MSG.fields_by_name['chatGroupJoined'].message_type = msg_chatgroup_pb2._CHATGROUPJOINED
 _MSG.fields_by_name['chatGroupLeaved'].message_type = msg_chatgroup_pb2._CHATGROUPLEAVED
 _MSG.fields_by_name['userJoinedChatGroup'].message_type = msg_chatgroup_pb2._USERJOINEDCHATGROUP
@@ -715,6 +754,8 @@ _MSG.fields_by_name['joinedCaBattleQueue'].message_type = msg_campus_arena_pb2._
 _MSG.fields_by_name['leavedCaBattleQueue'].message_type = msg_campus_arena_pb2._CAQUEUE
 _MSG.fields_by_name['inetcafePublicChat'].message_type = msg_chat_pb2._GROUPCHAT
 _MSG.fields_by_name['inetcafeTableUpdated'].message_type = res_inet_pb2._INETTABLE
+_MSG.fields_by_name['alert'].message_type = msg_alert_pb2._ALERTMESSAGE
+_MSG.fields_by_name['gameResultAlert'].message_type = msg_alert_pb2._GAMERESULTALERTMESSAGE
 _MSGLIST.fields_by_name['messages'].message_type = _MSG
 
 class Msg(message.Message):

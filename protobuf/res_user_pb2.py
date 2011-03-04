@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_user.proto',
   package='',
-  serialized_pb='\n\x0eres_user.proto\x1a\x0eres_clan.proto\x1a\x12res_listbase.proto\"0\n\x14UserTCPLoginResponse\x12\x0b\n\x03sid\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x17\n\x15UserTCPLogoutResponse\"\x15\n\x13UserTCPDropResponse\"\xf8\t\n\tUserModel\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07subname\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\t\x12\r\n\x05\x65mail\x18\x05 \x01(\t\x12\x0f\n\x07\x63ollege\x18\n \x01(\t\x12\x10\n\x08portrait\x18\t \x01(\t\x12\x1e\n\x04\x63lan\x18\x0b \x01(\x0b\x32\x10.ClanGetResponse\x12\x11\n\tisInParty\x18\x0c \x01(\x08\x12\x15\n\risInRivalList\x18\r \x01(\x08\x12\x18\n\x10isInGroupingList\x18\x0e \x01(\x08\x12\x11\n\tisInArena\x18\x0f \x01(\x08\x12\x15\n\rcampusArenaID\x18\x11 \x01(\r\x12\x17\n\x0f\x63\x61mpusArenaName\x18\x12 \x01(\t\x12\x1c\n\x14\x63\x61mpusArenaEventName\x18\x13 \x01(\t\x12\x0b\n\x03\x61ge\x18\x17 \x01(\x05\x12\x0e\n\x06gender\x18\x18 \x01(\t\x12\x14\n\x0cjianghudiwei\x18\x19 \x01(\t\x12\x10\n\x08truename\x18\x1a \x01(\t\x12\x10\n\x08\x62irthday\x18\x1b \x01(\t\x12\x0c\n\x04\x63ity\x18\x1c \x01(\t\x12\x12\n\ndepartment\x18\x1d \x01(\t\x12\r\n\x05im_qq\x18) \x01(\t\x12\x0e\n\x06mobile\x18* \x01(\t\x12\x15\n\rflash_storage\x18+ \x01(\t\x12\x0e\n\x06im_msn\x18, \x01(\t\x12\x12\n\nyearjoined\x18. \x01(\t\x12\x12\n\ndormintory\x18/ \x01(\t\x12\r\n\x05mouse\x18\x30 \x01(\t\x12\x10\n\x08keyboard\x18\x31 \x01(\t\x12\x0c\n\x04gold\x18\x32 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_score\x18Q \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_level\x18R \x01(\r\x12\"\n\x1a\x63\x61\x30\x33_dota_next_level_score\x18S \x01(\x05\x12\"\n\x1a\x63\x61\x30\x33_dota_this_level_score\x18T \x01(\x05\x12\x1d\n\x15\x63\x61\x30\x33_dota_daily_match\x18U \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_total\x18V \x01(\x05\x12\x1c\n\x14\x63\x61\x30\x33_dota_early_quit\x18W \x01(\x05\x12\x15\n\rca03_dota_win\x18X \x01(\x05\x12\x15\n\rca03_sc_score\x18[ \x01(\x05\x12\x15\n\rca03_sc_level\x18\\ \x01(\r\x12 \n\x18\x63\x61\x30\x33_sc_next_level_score\x18] \x01(\x05\x12 \n\x18\x63\x61\x30\x33_sc_this_level_score\x18^ \x01(\x05\x12\x1b\n\x13\x63\x61\x30\x33_sc_daily_match\x18_ \x01(\x05\x12\x15\n\rca03_sc_total\x18` \x01(\x05\x12\x1a\n\x12\x63\x61\x30\x33_sc_early_quit\x18\x61 \x01(\x05\x12\x13\n\x0b\x63\x61\x30\x33_sc_win\x18\x62 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_score\x18\x65 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_level\x18\x66 \x01(\r\x12\"\n\x1a\x63\x61\x30\x33_war3_next_level_score\x18g \x01(\x05\x12\"\n\x1a\x63\x61\x30\x33_war3_this_level_score\x18h \x01(\x05\x12\x1d\n\x15\x63\x61\x30\x33_war3_daily_match\x18i \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_total\x18j \x01(\x05\x12\x1c\n\x14\x63\x61\x30\x33_war3_early_quit\x18k \x01(\x05\x12\x15\n\rca03_war3_win\x18l \x01(\x05\"J\n\x10UserListResponse\x12\x19\n\x05users\x18\x01 \x03(\x0b\x32\n.UserModel\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParams\"\'\n\x13\x43ollegeListResponse\x12\x10\n\x08\x63olleges\x18\x01 \x03(\tB\x12\n\x0eproto.responseH\x02')
+  serialized_pb='\n\x0eres_user.proto\x1a\x0eres_clan.proto\x1a\x12res_listbase.proto\"0\n\x14UserTCPLoginResponse\x12\x0b\n\x03sid\x18\x01 \x01(\t\x12\x0b\n\x03uid\x18\x02 \x01(\r\"\x17\n\x15UserTCPLogoutResponse\"\x15\n\x13UserTCPDropResponse\"\xe3\n\n\tUserModel\x12\n\n\x02id\x18\x01 \x02(\r\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0f\n\x07subname\x18\x03 \x01(\t\x12\x0e\n\x06status\x18\x04 \x01(\t\x12\r\n\x05\x65mail\x18\x05 \x01(\t\x12\x0f\n\x07\x63ollege\x18\n \x01(\t\x12\x10\n\x08portrait\x18\t \x01(\t\x12\x1e\n\x04\x63lan\x18\x0b \x01(\x0b\x32\x10.ClanGetResponse\x12\x11\n\tisInParty\x18\x0c \x01(\x08\x12\x15\n\risInRivalList\x18\r \x01(\x08\x12\x18\n\x10isInGroupingList\x18\x0e \x01(\x08\x12\x11\n\tisInArena\x18\x0f \x01(\x08\x12\x15\n\rcampusArenaID\x18\x11 \x01(\r\x12\x17\n\x0f\x63\x61mpusArenaName\x18\x12 \x01(\t\x12\x1c\n\x14\x63\x61mpusArenaEventName\x18\x13 \x01(\t\x12\x11\n\tstatus_ex\x18\x14 \x01(\t\x12\x12\n\nlast_login\x18\x15 \x01(\r\x12\x0b\n\x03\x61ge\x18\x17 \x01(\x05\x12\x0e\n\x06gender\x18\x18 \x01(\t\x12\x14\n\x0cjianghudiwei\x18\x19 \x01(\t\x12\x10\n\x08truename\x18\x1a \x01(\t\x12\x10\n\x08\x62irthday\x18\x1b \x01(\t\x12\x0c\n\x04\x63ity\x18\x1c \x01(\t\x12\x12\n\ndepartment\x18\x1d \x01(\t\x12\r\n\x05im_qq\x18) \x01(\t\x12\x0e\n\x06mobile\x18* \x01(\t\x12\x15\n\rflash_storage\x18+ \x01(\t\x12\x0e\n\x06im_msn\x18, \x01(\t\x12\x12\n\nyearjoined\x18. \x01(\t\x12\x12\n\ndormintory\x18/ \x01(\t\x12\r\n\x05mouse\x18\x30 \x01(\t\x12\x10\n\x08keyboard\x18\x31 \x01(\t\x12\x0c\n\x04gold\x18\x32 \x01(\x05\x12\x10\n\x08\x61\x63tivity\x18\x33 \x01(\x05\x12\r\n\x05power\x18\x34 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_score\x18Q \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_level\x18R \x01(\r\x12\"\n\x1a\x63\x61\x30\x33_dota_next_level_score\x18S \x01(\x05\x12\"\n\x1a\x63\x61\x30\x33_dota_this_level_score\x18T \x01(\x05\x12\x1d\n\x15\x63\x61\x30\x33_dota_daily_match\x18U \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_dota_total\x18V \x01(\x05\x12\x1c\n\x14\x63\x61\x30\x33_dota_early_quit\x18W \x01(\x05\x12\x15\n\rca03_dota_win\x18X \x01(\x05\x12\x15\n\rca03_sc_score\x18[ \x01(\x05\x12\x15\n\rca03_sc_level\x18\\ \x01(\r\x12 \n\x18\x63\x61\x30\x33_sc_next_level_score\x18] \x01(\x05\x12 \n\x18\x63\x61\x30\x33_sc_this_level_score\x18^ \x01(\x05\x12\x1b\n\x13\x63\x61\x30\x33_sc_daily_match\x18_ \x01(\x05\x12\x15\n\rca03_sc_total\x18` \x01(\x05\x12\x1a\n\x12\x63\x61\x30\x33_sc_early_quit\x18\x61 \x01(\x05\x12\x13\n\x0b\x63\x61\x30\x33_sc_win\x18\x62 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_score\x18\x65 \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_level\x18\x66 \x01(\r\x12\"\n\x1a\x63\x61\x30\x33_war3_next_level_score\x18g \x01(\x05\x12\"\n\x1a\x63\x61\x30\x33_war3_this_level_score\x18h \x01(\x05\x12\x1d\n\x15\x63\x61\x30\x33_war3_daily_match\x18i \x01(\x05\x12\x17\n\x0f\x63\x61\x30\x33_war3_total\x18j \x01(\x05\x12\x1c\n\x14\x63\x61\x30\x33_war3_early_quit\x18k \x01(\x05\x12\x15\n\rca03_war3_win\x18l \x01(\x05\x12!\n\tgameStats\x18o \x03(\x0b\x32\x0e.UserGameStats\"Y\n\rUserGameStats\x12\x0f\n\x07game_id\x18\x01 \x01(\r\x12\r\n\x05power\x18\x02 \x01(\r\x12\x0c\n\x04rank\x18\x03 \x01(\r\x12\x0b\n\x03win\x18\x04 \x01(\r\x12\r\n\x05total\x18\x05 \x01(\r\"J\n\x10UserListResponse\x12\x19\n\x05users\x18\x01 \x03(\x0b\x32\n.UserModel\x12\x1b\n\x06params\x18\x02 \x01(\x0b\x32\x0b.ListParams\"\'\n\x13\x43ollegeListResponse\x12\x10\n\x08\x63olleges\x18\x01 \x03(\tB\x12\n\x0eproto.responseH\x02')
 
 
 
@@ -205,282 +205,317 @@ _USERMODEL = descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='age', full_name='UserModel.age', index=15,
+      name='status_ex', full_name='UserModel.status_ex', index=15,
+      number=20, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='last_login', full_name='UserModel.last_login', index=16,
+      number=21, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='age', full_name='UserModel.age', index=17,
       number=23, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='gender', full_name='UserModel.gender', index=16,
+      name='gender', full_name='UserModel.gender', index=18,
       number=24, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='jianghudiwei', full_name='UserModel.jianghudiwei', index=17,
+      name='jianghudiwei', full_name='UserModel.jianghudiwei', index=19,
       number=25, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='truename', full_name='UserModel.truename', index=18,
+      name='truename', full_name='UserModel.truename', index=20,
       number=26, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='birthday', full_name='UserModel.birthday', index=19,
+      name='birthday', full_name='UserModel.birthday', index=21,
       number=27, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='city', full_name='UserModel.city', index=20,
+      name='city', full_name='UserModel.city', index=22,
       number=28, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='department', full_name='UserModel.department', index=21,
+      name='department', full_name='UserModel.department', index=23,
       number=29, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='im_qq', full_name='UserModel.im_qq', index=22,
+      name='im_qq', full_name='UserModel.im_qq', index=24,
       number=41, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='mobile', full_name='UserModel.mobile', index=23,
+      name='mobile', full_name='UserModel.mobile', index=25,
       number=42, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='flash_storage', full_name='UserModel.flash_storage', index=24,
+      name='flash_storage', full_name='UserModel.flash_storage', index=26,
       number=43, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='im_msn', full_name='UserModel.im_msn', index=25,
+      name='im_msn', full_name='UserModel.im_msn', index=27,
       number=44, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='yearjoined', full_name='UserModel.yearjoined', index=26,
+      name='yearjoined', full_name='UserModel.yearjoined', index=28,
       number=46, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='dormintory', full_name='UserModel.dormintory', index=27,
+      name='dormintory', full_name='UserModel.dormintory', index=29,
       number=47, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='mouse', full_name='UserModel.mouse', index=28,
+      name='mouse', full_name='UserModel.mouse', index=30,
       number=48, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='keyboard', full_name='UserModel.keyboard', index=29,
+      name='keyboard', full_name='UserModel.keyboard', index=31,
       number=49, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='gold', full_name='UserModel.gold', index=30,
+      name='gold', full_name='UserModel.gold', index=32,
       number=50, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_score', full_name='UserModel.ca03_dota_score', index=31,
+      name='activity', full_name='UserModel.activity', index=33,
+      number=51, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='power', full_name='UserModel.power', index=34,
+      number=52, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='ca03_dota_score', full_name='UserModel.ca03_dota_score', index=35,
       number=81, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_level', full_name='UserModel.ca03_dota_level', index=32,
+      name='ca03_dota_level', full_name='UserModel.ca03_dota_level', index=36,
       number=82, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_next_level_score', full_name='UserModel.ca03_dota_next_level_score', index=33,
+      name='ca03_dota_next_level_score', full_name='UserModel.ca03_dota_next_level_score', index=37,
       number=83, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_this_level_score', full_name='UserModel.ca03_dota_this_level_score', index=34,
+      name='ca03_dota_this_level_score', full_name='UserModel.ca03_dota_this_level_score', index=38,
       number=84, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_daily_match', full_name='UserModel.ca03_dota_daily_match', index=35,
+      name='ca03_dota_daily_match', full_name='UserModel.ca03_dota_daily_match', index=39,
       number=85, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_total', full_name='UserModel.ca03_dota_total', index=36,
+      name='ca03_dota_total', full_name='UserModel.ca03_dota_total', index=40,
       number=86, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_early_quit', full_name='UserModel.ca03_dota_early_quit', index=37,
+      name='ca03_dota_early_quit', full_name='UserModel.ca03_dota_early_quit', index=41,
       number=87, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_dota_win', full_name='UserModel.ca03_dota_win', index=38,
+      name='ca03_dota_win', full_name='UserModel.ca03_dota_win', index=42,
       number=88, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_score', full_name='UserModel.ca03_sc_score', index=39,
+      name='ca03_sc_score', full_name='UserModel.ca03_sc_score', index=43,
       number=91, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_level', full_name='UserModel.ca03_sc_level', index=40,
+      name='ca03_sc_level', full_name='UserModel.ca03_sc_level', index=44,
       number=92, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_next_level_score', full_name='UserModel.ca03_sc_next_level_score', index=41,
+      name='ca03_sc_next_level_score', full_name='UserModel.ca03_sc_next_level_score', index=45,
       number=93, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_this_level_score', full_name='UserModel.ca03_sc_this_level_score', index=42,
+      name='ca03_sc_this_level_score', full_name='UserModel.ca03_sc_this_level_score', index=46,
       number=94, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_daily_match', full_name='UserModel.ca03_sc_daily_match', index=43,
+      name='ca03_sc_daily_match', full_name='UserModel.ca03_sc_daily_match', index=47,
       number=95, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_total', full_name='UserModel.ca03_sc_total', index=44,
+      name='ca03_sc_total', full_name='UserModel.ca03_sc_total', index=48,
       number=96, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_early_quit', full_name='UserModel.ca03_sc_early_quit', index=45,
+      name='ca03_sc_early_quit', full_name='UserModel.ca03_sc_early_quit', index=49,
       number=97, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_sc_win', full_name='UserModel.ca03_sc_win', index=46,
+      name='ca03_sc_win', full_name='UserModel.ca03_sc_win', index=50,
       number=98, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_score', full_name='UserModel.ca03_war3_score', index=47,
+      name='ca03_war3_score', full_name='UserModel.ca03_war3_score', index=51,
       number=101, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_level', full_name='UserModel.ca03_war3_level', index=48,
+      name='ca03_war3_level', full_name='UserModel.ca03_war3_level', index=52,
       number=102, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_next_level_score', full_name='UserModel.ca03_war3_next_level_score', index=49,
+      name='ca03_war3_next_level_score', full_name='UserModel.ca03_war3_next_level_score', index=53,
       number=103, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_this_level_score', full_name='UserModel.ca03_war3_this_level_score', index=50,
+      name='ca03_war3_this_level_score', full_name='UserModel.ca03_war3_this_level_score', index=54,
       number=104, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_daily_match', full_name='UserModel.ca03_war3_daily_match', index=51,
+      name='ca03_war3_daily_match', full_name='UserModel.ca03_war3_daily_match', index=55,
       number=105, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_total', full_name='UserModel.ca03_war3_total', index=52,
+      name='ca03_war3_total', full_name='UserModel.ca03_war3_total', index=56,
       number=106, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_early_quit', full_name='UserModel.ca03_war3_early_quit', index=53,
+      name='ca03_war3_early_quit', full_name='UserModel.ca03_war3_early_quit', index=57,
       number=107, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='ca03_war3_win', full_name='UserModel.ca03_war3_win', index=54,
+      name='ca03_war3_win', full_name='UserModel.ca03_war3_win', index=58,
       number=108, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='gameStats', full_name='UserModel.gameStats', index=59,
+      number=111, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -494,7 +529,63 @@ _USERMODEL = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=153,
-  serialized_end=1425,
+  serialized_end=1532,
+)
+
+
+_USERGAMESTATS = descriptor.Descriptor(
+  name='UserGameStats',
+  full_name='UserGameStats',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='game_id', full_name='UserGameStats.game_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='power', full_name='UserGameStats.power', index=1,
+      number=2, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='rank', full_name='UserGameStats.rank', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='win', full_name='UserGameStats.win', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='total', full_name='UserGameStats.total', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=1534,
+  serialized_end=1623,
 )
 
 
@@ -528,8 +619,8 @@ _USERLISTRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1427,
-  serialized_end=1501,
+  serialized_start=1625,
+  serialized_end=1699,
 )
 
 
@@ -556,14 +647,15 @@ _COLLEGELISTRESPONSE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1503,
-  serialized_end=1542,
+  serialized_start=1701,
+  serialized_end=1740,
 )
 
 import res_clan_pb2
 import res_listbase_pb2
 
 _USERMODEL.fields_by_name['clan'].message_type = res_clan_pb2._CLANGETRESPONSE
+_USERMODEL.fields_by_name['gameStats'].message_type = _USERGAMESTATS
 _USERLISTRESPONSE.fields_by_name['users'].message_type = _USERMODEL
 _USERLISTRESPONSE.fields_by_name['params'].message_type = res_listbase_pb2._LISTPARAMS
 
@@ -590,6 +682,12 @@ class UserModel(message.Message):
   DESCRIPTOR = _USERMODEL
   
   # @@protoc_insertion_point(class_scope:UserModel)
+
+class UserGameStats(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _USERGAMESTATS
+  
+  # @@protoc_insertion_point(class_scope:UserGameStats)
 
 class UserListResponse(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType

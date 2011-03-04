@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='msg_user.proto',
   package='',
-  serialized_pb='\n\x0emsg_user.proto\x1a\x0eres_user.proto\"5\n\x13\x42\x65\x63\x61meFriendMessage\x12\x1e\n\ntargetUser\x18\x01 \x01(\x0b\x32\n.UserModel\"<\n\x1a\x46riendStatusChangedMessage\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\t\"D\n\x18\x46riendDataChangedMessage\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x18\n\x04user\x18\x02 \x01(\x0b\x32\n.UserModel\"S\n\x11MakeFriendMessage\x12\x1c\n\x08\x66romUser\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x10\n\x08toUserID\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\"G\n\x0eWhisperMessage\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x10\n\x08toUserID\x18\x02 \x01(\r\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x1b\n\x19\x41lertValidateEmailMessage\"3\n\x0cUserAccepted\x12\x15\n\ransweredMsgID\x18\x01 \x01(\r\x12\x0c\n\x04text\x18\x02 \x01(\t\"3\n\x0cUserDeclined\x12\x15\n\ransweredMsgID\x18\x01 \x01(\r\x12\x0c\n\x04text\x18\x02 \x01(\t\"D\n\x12MakeFriendAccepted\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x1a\n\x06toUser\x18\x02 \x01(\x0b\x32\n.UserModel\"D\n\x12MakeFriendDeclined\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x1a\n\x06toUser\x18\x02 \x01(\x0b\x32\n.UserModelB\r\n\tproto.msgH\x02')
+  serialized_pb='\n\x0emsg_user.proto\x1a\x0eres_user.proto\"5\n\x13\x42\x65\x63\x61meFriendMessage\x12\x1e\n\ntargetUser\x18\x01 \x01(\x0b\x32\n.UserModel\"<\n\x1a\x46riendStatusChangedMessage\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x0e\n\x06status\x18\x02 \x01(\t\"D\n\x18\x46riendDataChangedMessage\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x18\n\x04user\x18\x02 \x01(\x0b\x32\n.UserModel\"S\n\x11MakeFriendMessage\x12\x1c\n\x08\x66romUser\x18\x01 \x01(\x0b\x32\n.UserModel\x12\x10\n\x08toUserID\x18\x02 \x01(\r\x12\x0e\n\x06reason\x18\x03 \x01(\t\"G\n\x0eWhisperMessage\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x10\n\x08toUserID\x18\x02 \x01(\r\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"\x1b\n\x19\x41lertValidateEmailMessage\"3\n\x0cUserAccepted\x12\x15\n\ransweredMsgID\x18\x01 \x01(\r\x12\x0c\n\x04text\x18\x02 \x01(\t\"3\n\x0cUserDeclined\x12\x15\n\ransweredMsgID\x18\x01 \x01(\r\x12\x0c\n\x04text\x18\x02 \x01(\t\"D\n\x12MakeFriendAccepted\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x1a\n\x06toUser\x18\x02 \x01(\x0b\x32\n.UserModel\"D\n\x12MakeFriendDeclined\x12\x12\n\nfromUserID\x18\x01 \x01(\r\x12\x1a\n\x06toUser\x18\x02 \x01(\x0b\x32\n.UserModel\",\n\x10UserStatusUpdate\x12\x18\n\x04user\x18\x01 \x01(\x0b\x32\n.UserModelB\r\n\tproto.msgH\x02')
 
 
 
@@ -357,6 +357,34 @@ _MAKEFRIENDDECLINED = descriptor.Descriptor(
   serialized_end=652,
 )
 
+
+_USERSTATUSUPDATE = descriptor.Descriptor(
+  name='UserStatusUpdate',
+  full_name='UserStatusUpdate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='user', full_name='UserStatusUpdate.user', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=654,
+  serialized_end=698,
+)
+
 import res_user_pb2
 
 _BECAMEFRIENDMESSAGE.fields_by_name['targetUser'].message_type = res_user_pb2._USERMODEL
@@ -364,6 +392,7 @@ _FRIENDDATACHANGEDMESSAGE.fields_by_name['user'].message_type = res_user_pb2._US
 _MAKEFRIENDMESSAGE.fields_by_name['fromUser'].message_type = res_user_pb2._USERMODEL
 _MAKEFRIENDACCEPTED.fields_by_name['toUser'].message_type = res_user_pb2._USERMODEL
 _MAKEFRIENDDECLINED.fields_by_name['toUser'].message_type = res_user_pb2._USERMODEL
+_USERSTATUSUPDATE.fields_by_name['user'].message_type = res_user_pb2._USERMODEL
 
 class BecameFriendMessage(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
@@ -424,5 +453,11 @@ class MakeFriendDeclined(message.Message):
   DESCRIPTOR = _MAKEFRIENDDECLINED
   
   # @@protoc_insertion_point(class_scope:MakeFriendDeclined)
+
+class UserStatusUpdate(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _USERSTATUSUPDATE
+  
+  # @@protoc_insertion_point(class_scope:UserStatusUpdate)
 
 # @@protoc_insertion_point(module_scope)

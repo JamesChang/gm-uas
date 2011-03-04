@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='res_war3detail.proto',
   package='',
-  serialized_pb='\n\x14res_war3detail.proto\x1a\x0eres_user.proto\"\xa6\x0c\n\nWar3Detail\x12&\n\x06header\x18\x01 \x02(\x0b\x32\x16.War3Detail.War3Header\x12)\n\x07\x62\x61ttles\x18\x02 \x03(\x0b\x32\x18.War3Detail.NormalBattle\x12\"\n\x05\x64otas\x18\x03 \x03(\x0b\x32\x13.War3Detail.RPGDota\x1ap\n\nWar3Header\x12\x13\n\x0bwar3Version\x18\x01 \x02(\t\x12\x13\n\x0bmessageType\x18\x02 \x02(\t\x12\x12\n\nbattleType\x18\x03 \x02(\t\x12\x0c\n\x04time\x18\x04 \x02(\r\x12\x16\n\x0euserIDOfSender\x18\x05 \x02(\r\x1a\xc8\x03\n\nDotaPlayer\x12\x0e\n\x06userID\x18\x01 \x02(\r\x12\x0e\n\x06result\x18\x02 \x01(\t\x12\x11\n\tleaveTime\x18\x03 \x01(\x05\x12\x14\n\x0ctowerDestroy\x18\x04 \x01(\x05\x12\x16\n\x0eneutralsNumber\x18\x05 \x01(\x05\x12\x10\n\x08lastKill\x18\x06 \x01(\x05\x12\x14\n\x0c\x61ntiLastKill\x18\x07 \x01(\x05\x12\x11\n\ttotalGold\x18\x08 \x01(\x05\x12\x13\n\x0btotalAssist\x18\t \x01(\x05\x12\x13\n\x0bhighestKill\x18\n \x01(\x05\x12\x10\n\x08heroKill\x18\x0b \x01(\x05\x12\x11\n\theroDeath\x18\x0c \x01(\x05\x12\x18\n\x10\x64oubleKillNumber\x18\r \x01(\x05\x12\x18\n\x10triplekillNumber\x18\x0e \x01(\x05\x12\x0f\n\x07isLeave\x18\x0f \x01(\t\x12\x0c\n\x04hero\x18\x10 \x01(\x05\x12\x0b\n\x03\x41PM\x18\x11 \x01(\x02\x12\x18\n\x04user\x18\x12 \x01(\x0b\x32\n.UserModel\x12\x11\n\theroLevel\x18\x13 \x01(\x05\x12\x16\n\x0eheroExperience\x18\x14 \x01(\x05\x12\x1b\n\x13thisLevelexperience\x18\x15 \x01(\x05\x12\r\n\x05\x66orce\x18\x16 \x01(\t\x1aW\n\tWar3Leave\x12\x0e\n\x06userID\x18\x01 \x02(\r\x12\x13\n\x0bleaveReason\x18\x02 \x01(\r\x12\x13\n\x0bleaveResult\x18\x03 \x01(\r\x12\x10\n\x08leaveLog\x18\x04 \x01(\x0c\x1a\x86\x01\n\x08War3Unit\x12\x10\n\x08stringID\x18\x01 \x02(\t\x12\x15\n\ntotalBuilt\x18\x02 \x01(\x05:\x01\x30\x12\x13\n\x08nowExist\x18\x03 \x01(\x05:\x01\x30\x12\x1a\n\x0fwaitForBuilding\x18\x04 \x01(\x05:\x01\x30\x12\x12\n\nisBuilding\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\x1a\x86\x02\n\x12NormalBattlePlayer\x12\x0e\n\x06userID\x18\x01 \x01(\x05\x12\x16\n\x0b\x63urrentGold\x18\x02 \x01(\x05:\x01\x30\x12\x16\n\x0b\x63urrentWood\x18\x03 \x01(\x05:\x01\x30\x12\x0e\n\x03\x41PM\x18\x04 \x01(\x02:\x01\x30\x12\x0c\n\x04race\x18\x05 \x01(\t\x12\x0e\n\x06result\x18\x06 \x01(\t\x12\x11\n\tleaveTime\x18\x07 \x01(\x05\x12\x0f\n\x07isLeave\x18\x08 \x01(\t\x12\x10\n\x08leaveLog\x18\t \x01(\x0c\x12#\n\x05units\x18\n \x03(\x0b\x32\x14.War3Detail.War3Unit\x12\x18\n\x04user\x18\x0b \x01(\x0b\x32\n.UserModel\x12\r\n\x05\x66orce\x18\x0c \x01(\t\x1a\x84\x01\n\x08KillUnit\x12&\n\x06hiller\x18\x01 \x02(\x0b\x32\x16.War3Detail.DotaPlayer\x12%\n\x05\x64\x65\x61th\x18\x02 \x02(\x0b\x32\x16.War3Detail.DotaPlayer\x12)\n\tassisters\x18\x03 \x03(\x0b\x32\x16.War3Detail.DotaPlayer\x1ah\n\x0cNormalBattle\x12.\n\x06palyer\x18\x01 \x01(\x0b\x32\x1e.War3Detail.NormalBattlePlayer\x12(\n\tleaveGame\x18\x02 \x01(\x0b\x32\x15.War3Detail.War3Leave\x1a\x87\x01\n\x07RPGDota\x12*\n\x0ckillMessages\x18\x01 \x01(\x0b\x32\x14.War3Detail.KillUnit\x12&\n\x06player\x18\x02 \x01(\x0b\x32\x16.War3Detail.DotaPlayer\x12(\n\tleaveGame\x18\x03 \x01(\x0b\x32\x15.War3Detail.War3LeaveB\x12\n\x0eproto.responseH\x02')
+  serialized_pb='\n\x14res_war3detail.proto\x1a\x0eres_user.proto\"\xcb\x0c\n\nWar3Detail\x12&\n\x06header\x18\x01 \x01(\x0b\x32\x16.War3Detail.War3Header\x12)\n\x07\x62\x61ttles\x18\x02 \x03(\x0b\x32\x18.War3Detail.NormalBattle\x12\"\n\x05\x64otas\x18\x03 \x03(\x0b\x32\x13.War3Detail.RPGDota\x1ap\n\nWar3Header\x12\x13\n\x0bwar3Version\x18\x01 \x02(\t\x12\x13\n\x0bmessageType\x18\x02 \x02(\t\x12\x12\n\nbattleType\x18\x03 \x02(\t\x12\x0c\n\x04time\x18\x04 \x02(\r\x12\x16\n\x0euserIDOfSender\x18\x05 \x02(\r\x1a\xed\x03\n\nDotaPlayer\x12\x0e\n\x06userID\x18\x01 \x02(\r\x12\x0e\n\x06result\x18\x02 \x01(\t\x12\x11\n\tleaveTime\x18\x03 \x01(\x05\x12\x14\n\x0ctowerDestroy\x18\x04 \x01(\x05\x12\x16\n\x0eneutralsNumber\x18\x05 \x01(\x05\x12\x10\n\x08lastKill\x18\x06 \x01(\x05\x12\x14\n\x0c\x61ntiLastKill\x18\x07 \x01(\x05\x12\x11\n\ttotalGold\x18\x08 \x01(\x05\x12\x13\n\x0btotalAssist\x18\t \x01(\x05\x12\x13\n\x0bhighestKill\x18\n \x01(\x05\x12\x10\n\x08heroKill\x18\x0b \x01(\x05\x12\x11\n\theroDeath\x18\x0c \x01(\x05\x12\x18\n\x10\x64oubleKillNumber\x18\r \x01(\x05\x12\x18\n\x10triplekillNumber\x18\x0e \x01(\x05\x12\x0f\n\x07isLeave\x18\x0f \x01(\t\x12\x0c\n\x04hero\x18\x10 \x01(\x05\x12\x0b\n\x03\x41PM\x18\x11 \x01(\x02\x12\x18\n\x04user\x18\x12 \x01(\x0b\x32\n.UserModel\x12\x11\n\theroLevel\x18\x13 \x01(\x05\x12\x16\n\x0eheroExperience\x18\x14 \x01(\x05\x12\x1b\n\x13thisLevelexperience\x18\x15 \x01(\x05\x12\r\n\x05\x66orce\x18\x16 \x01(\t\x12\x11\n\thero_name\x18\x17 \x01(\t\x12\x10\n\x08hero_art\x18\x18 \x01(\t\x1aW\n\tWar3Leave\x12\x0e\n\x06userID\x18\x01 \x02(\r\x12\x13\n\x0bleaveReason\x18\x02 \x01(\r\x12\x13\n\x0bleaveResult\x18\x03 \x01(\r\x12\x10\n\x08leaveLog\x18\x04 \x01(\x0c\x1a\x86\x01\n\x08War3Unit\x12\x10\n\x08stringID\x18\x01 \x02(\t\x12\x15\n\ntotalBuilt\x18\x02 \x01(\x05:\x01\x30\x12\x13\n\x08nowExist\x18\x03 \x01(\x05:\x01\x30\x12\x1a\n\x0fwaitForBuilding\x18\x04 \x01(\x05:\x01\x30\x12\x12\n\nisBuilding\x18\x05 \x01(\x05\x12\x0c\n\x04name\x18\x06 \x01(\t\x1a\x86\x02\n\x12NormalBattlePlayer\x12\x0e\n\x06userID\x18\x01 \x01(\x05\x12\x16\n\x0b\x63urrentGold\x18\x02 \x01(\x05:\x01\x30\x12\x16\n\x0b\x63urrentWood\x18\x03 \x01(\x05:\x01\x30\x12\x0e\n\x03\x41PM\x18\x04 \x01(\x02:\x01\x30\x12\x0c\n\x04race\x18\x05 \x01(\t\x12\x0e\n\x06result\x18\x06 \x01(\t\x12\x11\n\tleaveTime\x18\x07 \x01(\x05\x12\x0f\n\x07isLeave\x18\x08 \x01(\t\x12\x10\n\x08leaveLog\x18\t \x01(\x0c\x12#\n\x05units\x18\n \x03(\x0b\x32\x14.War3Detail.War3Unit\x12\x18\n\x04user\x18\x0b \x01(\x0b\x32\n.UserModel\x12\r\n\x05\x66orce\x18\x0c \x01(\t\x1a\x84\x01\n\x08KillUnit\x12&\n\x06hiller\x18\x01 \x02(\x0b\x32\x16.War3Detail.DotaPlayer\x12%\n\x05\x64\x65\x61th\x18\x02 \x02(\x0b\x32\x16.War3Detail.DotaPlayer\x12)\n\tassisters\x18\x03 \x03(\x0b\x32\x16.War3Detail.DotaPlayer\x1ah\n\x0cNormalBattle\x12.\n\x06palyer\x18\x01 \x01(\x0b\x32\x1e.War3Detail.NormalBattlePlayer\x12(\n\tleaveGame\x18\x02 \x01(\x0b\x32\x15.War3Detail.War3Leave\x1a\x87\x01\n\x07RPGDota\x12*\n\x0ckillMessages\x18\x01 \x01(\x0b\x32\x14.War3Detail.KillUnit\x12&\n\x06player\x18\x02 \x01(\x0b\x32\x16.War3Detail.DotaPlayer\x12(\n\tleaveGame\x18\x03 \x01(\x0b\x32\x15.War3Detail.War3LeaveB\x12\n\x0eproto.responseH\x02')
 
 
 
@@ -231,6 +231,20 @@ _WAR3DETAIL_DOTAPLAYER = descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    descriptor.FieldDescriptor(
+      name='hero_name', full_name='War3Detail.DotaPlayer.hero_name', index=22,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='hero_art', full_name='War3Detail.DotaPlayer.hero_art', index=23,
+      number=24, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -241,7 +255,7 @@ _WAR3DETAIL_DOTAPLAYER = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=289,
-  serialized_end=745,
+  serialized_end=782,
 )
 
 _WAR3DETAIL_WAR3LEAVE = descriptor.Descriptor(
@@ -288,8 +302,8 @@ _WAR3DETAIL_WAR3LEAVE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=747,
-  serialized_end=834,
+  serialized_start=784,
+  serialized_end=871,
 )
 
 _WAR3DETAIL_WAR3UNIT = descriptor.Descriptor(
@@ -350,8 +364,8 @@ _WAR3DETAIL_WAR3UNIT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=837,
-  serialized_end=971,
+  serialized_start=874,
+  serialized_end=1008,
 )
 
 _WAR3DETAIL_NORMALBATTLEPLAYER = descriptor.Descriptor(
@@ -454,8 +468,8 @@ _WAR3DETAIL_NORMALBATTLEPLAYER = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=974,
-  serialized_end=1236,
+  serialized_start=1011,
+  serialized_end=1273,
 )
 
 _WAR3DETAIL_KILLUNIT = descriptor.Descriptor(
@@ -495,8 +509,8 @@ _WAR3DETAIL_KILLUNIT = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1239,
-  serialized_end=1371,
+  serialized_start=1276,
+  serialized_end=1408,
 )
 
 _WAR3DETAIL_NORMALBATTLE = descriptor.Descriptor(
@@ -529,8 +543,8 @@ _WAR3DETAIL_NORMALBATTLE = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1373,
-  serialized_end=1477,
+  serialized_start=1410,
+  serialized_end=1514,
 )
 
 _WAR3DETAIL_RPGDOTA = descriptor.Descriptor(
@@ -570,8 +584,8 @@ _WAR3DETAIL_RPGDOTA = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=1480,
-  serialized_end=1615,
+  serialized_start=1517,
+  serialized_end=1652,
 )
 
 _WAR3DETAIL = descriptor.Descriptor(
@@ -583,7 +597,7 @@ _WAR3DETAIL = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='header', full_name='War3Detail.header', index=0,
-      number=1, type=11, cpp_type=10, label=2,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -612,7 +626,7 @@ _WAR3DETAIL = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=41,
-  serialized_end=1615,
+  serialized_end=1652,
 )
 
 import res_user_pb2

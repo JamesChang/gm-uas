@@ -10,7 +10,7 @@ from google.protobuf import descriptor_pb2
 DESCRIPTOR = descriptor.FileDescriptor(
   name='msg_party.proto',
   package='',
-  serialized_pb='\n\x0fmsg_party.proto\x1a\x0fres_party.proto\"@\n\x0bPartyJoined\x12\x0f\n\x07partyID\x18\x01 \x01(\r\x12 \n\x05party\x18\x02 \x01(\x0b\x32\x11.PartyGetResponse\"\x1e\n\x0bPartyLeaved\x12\x0f\n\x07partyID\x18\x01 \x01(\r\"n\n\x0fUserJoinedParty\x12\x0f\n\x07partyID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x10\n\x08userName\x18\x03 \x01(\t\x12\x14\n\x0cuserPortrait\x18\x04 \x01(\t\x12\x12\n\nuserStatus\x18\x05 \x01(\t\"2\n\x0fUserLeavedParty\x12\x0f\n\x07partyID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\"O\n\x18PartyMemberStatusUpdated\x12\x0f\n\x07partyID\x18\x01 \x01(\r\x12\x0e\n\x06userID\x18\x02 \x01(\r\x12\x12\n\nuserStatus\x18\x03 \x01(\t\"v\n\x0fPartyInvitation\x12\x10\n\x08leaderID\x18\x01 \x01(\r\x12\x12\n\nleaderName\x18\x02 \x01(\t\x12\x16\n\x0eleaderPortrait\x18\x03 \x01(\t\x12\x0f\n\x07partyID\x18\x04 \x01(\r\x12\x14\n\x0ctargetUserID\x18\x05 \x01(\r\";\n\x17PartyInvitationDeclined\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x10\n\x08userName\x18\x02 \x01(\t\"7\n\x12PartyLeaderChanged\x12\x0f\n\x07partyID\x18\x01 \x01(\r\x12\x10\n\x08leaderID\x18\x02 \x01(\rB\r\n\tproto.msgH\x02')
+  serialized_pb='\n\x0fmsg_party.proto\x1a\x0fres_party.proto\")\n\x0bPartyJoined\x12\x1a\n\x05party\x18\x02 \x01(\x0b\x32\x0b.PartyModel\"\x1e\n\x0bPartyLeaved\x12\x0f\n\x07partyID\x18\x01 \x01(\t\">\n\x0fUserJoinedParty\x12\x0f\n\x07partyID\x18\x01 \x01(\t\x12\x1a\n\x04user\x18\x02 \x01(\x0b\x32\x0c.PartyMember\"2\n\x0fUserLeavedParty\x12\x0f\n\x07partyID\x18\x01 \x01(\t\x12\x0e\n\x06userID\x18\x02 \x01(\r\"H\n\x18PartyMemberStatusUpdated\x12\x0f\n\x07partyID\x18\x01 \x01(\t\x12\x1b\n\x05users\x18\x02 \x03(\x0b\x32\x0c.PartyMember\"v\n\x0fPartyInvitation\x12\x10\n\x08leaderID\x18\x01 \x01(\r\x12\x12\n\nleaderName\x18\x02 \x01(\t\x12\x16\n\x0eleaderPortrait\x18\x03 \x01(\t\x12\x0f\n\x07partyID\x18\x04 \x01(\t\x12\x14\n\x0ctargetUserID\x18\x05 \x01(\r\";\n\x17PartyInvitationDeclined\x12\x0e\n\x06userID\x18\x01 \x01(\r\x12\x10\n\x08userName\x18\x02 \x01(\t\"7\n\x12PartyLeaderChanged\x12\x0f\n\x07partyID\x18\x01 \x01(\t\x12\x10\n\x08leaderID\x18\x02 \x01(\r\"\"\n\x0f\x45ventInvitation\x12\x0f\n\x07\x65ventID\x18\x01 \x01(\r\"8\n\x17\x45ventInvitationDeclined\x12\x0f\n\x07partyID\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\tB\r\n\tproto.msgH\x02')
 
 
 
@@ -23,14 +23,7 @@ _PARTYJOINED = descriptor.Descriptor(
   containing_type=None,
   fields=[
     descriptor.FieldDescriptor(
-      name='partyID', full_name='PartyJoined.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='party', full_name='PartyJoined.party', index=1,
+      name='party', full_name='PartyJoined.party', index=0,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -46,7 +39,7 @@ _PARTYJOINED = descriptor.Descriptor(
   is_extendable=False,
   extension_ranges=[],
   serialized_start=36,
-  serialized_end=100,
+  serialized_end=77,
 )
 
 
@@ -59,8 +52,8 @@ _PARTYLEAVED = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='partyID', full_name='PartyLeaved.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -73,8 +66,8 @@ _PARTYLEAVED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=102,
-  serialized_end=132,
+  serialized_start=79,
+  serialized_end=109,
 )
 
 
@@ -87,36 +80,15 @@ _USERJOINEDPARTY = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='partyID', full_name='UserJoinedParty.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='userID', full_name='UserJoinedParty.userID', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='userName', full_name='UserJoinedParty.userName', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     descriptor.FieldDescriptor(
-      name='userPortrait', full_name='UserJoinedParty.userPortrait', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='userStatus', full_name='UserJoinedParty.userStatus', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=unicode("", "utf-8"),
+      name='user', full_name='UserJoinedParty.user', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -129,8 +101,8 @@ _USERJOINEDPARTY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=134,
-  serialized_end=244,
+  serialized_start=111,
+  serialized_end=173,
 )
 
 
@@ -143,8 +115,8 @@ _USERLEAVEDPARTY = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='partyID', full_name='UserLeavedParty.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -164,8 +136,8 @@ _USERLEAVEDPARTY = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=246,
-  serialized_end=296,
+  serialized_start=175,
+  serialized_end=225,
 )
 
 
@@ -178,22 +150,15 @@ _PARTYMEMBERSTATUSUPDATED = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='partyID', full_name='PartyMemberStatusUpdated.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='userID', full_name='PartyMemberStatusUpdated.userID', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    descriptor.FieldDescriptor(
-      name='userStatus', full_name='PartyMemberStatusUpdated.userStatus', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='users', full_name='PartyMemberStatusUpdated.users', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -206,8 +171,8 @@ _PARTYMEMBERSTATUSUPDATED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=298,
-  serialized_end=377,
+  serialized_start=227,
+  serialized_end=299,
 )
 
 
@@ -241,8 +206,8 @@ _PARTYINVITATION = descriptor.Descriptor(
       options=None),
     descriptor.FieldDescriptor(
       name='partyID', full_name='PartyInvitation.partyID', index=3,
-      number=4, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -262,8 +227,8 @@ _PARTYINVITATION = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=379,
-  serialized_end=497,
+  serialized_start=301,
+  serialized_end=419,
 )
 
 
@@ -297,8 +262,8 @@ _PARTYINVITATIONDECLINED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=499,
-  serialized_end=558,
+  serialized_start=421,
+  serialized_end=480,
 )
 
 
@@ -311,8 +276,8 @@ _PARTYLEADERCHANGED = descriptor.Descriptor(
   fields=[
     descriptor.FieldDescriptor(
       name='partyID', full_name='PartyLeaderChanged.partyID', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -332,13 +297,78 @@ _PARTYLEADERCHANGED = descriptor.Descriptor(
   options=None,
   is_extendable=False,
   extension_ranges=[],
-  serialized_start=560,
-  serialized_end=615,
+  serialized_start=482,
+  serialized_end=537,
+)
+
+
+_EVENTINVITATION = descriptor.Descriptor(
+  name='EventInvitation',
+  full_name='EventInvitation',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='eventID', full_name='EventInvitation.eventID', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=539,
+  serialized_end=573,
+)
+
+
+_EVENTINVITATIONDECLINED = descriptor.Descriptor(
+  name='EventInvitationDeclined',
+  full_name='EventInvitationDeclined',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    descriptor.FieldDescriptor(
+      name='partyID', full_name='EventInvitationDeclined.partyID', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    descriptor.FieldDescriptor(
+      name='text', full_name='EventInvitationDeclined.text', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=unicode("", "utf-8"),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  extension_ranges=[],
+  serialized_start=575,
+  serialized_end=631,
 )
 
 import res_party_pb2
 
-_PARTYJOINED.fields_by_name['party'].message_type = res_party_pb2._PARTYGETRESPONSE
+_PARTYJOINED.fields_by_name['party'].message_type = res_party_pb2._PARTYMODEL
+_USERJOINEDPARTY.fields_by_name['user'].message_type = res_party_pb2._PARTYMEMBER
+_PARTYMEMBERSTATUSUPDATED.fields_by_name['users'].message_type = res_party_pb2._PARTYMEMBER
 
 class PartyJoined(message.Message):
   __metaclass__ = reflection.GeneratedProtocolMessageType
@@ -387,5 +417,17 @@ class PartyLeaderChanged(message.Message):
   DESCRIPTOR = _PARTYLEADERCHANGED
   
   # @@protoc_insertion_point(class_scope:PartyLeaderChanged)
+
+class EventInvitation(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _EVENTINVITATION
+  
+  # @@protoc_insertion_point(class_scope:EventInvitation)
+
+class EventInvitationDeclined(message.Message):
+  __metaclass__ = reflection.GeneratedProtocolMessageType
+  DESCRIPTOR = _EVENTINVITATIONDECLINED
+  
+  # @@protoc_insertion_point(class_scope:EventInvitationDeclined)
 
 # @@protoc_insertion_point(module_scope)

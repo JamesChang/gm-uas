@@ -466,13 +466,14 @@ class Arena(User):
       
     def on_arenaEnded(self, msg):
         """游戏结束"""
-        RLOG.debug("%s_%s arenaEnded %s"%(self.name, self.id, self.arena))
-        self._sleep(random.random()*settings.USER_RANDOM_SLEEP_TIME)
-        rno = random.randrange(1,3)
-        if rno % 2 == 0:
-            self.leave_arena()
-        else:
-            self.make_ready()
+        if not msg.arenaEnded.error:
+            RLOG.debug("%s_%s arenaEnded %s"%(self.name, self.id, self.arena))
+            self._sleep(random.random()*settings.USER_RANDOM_SLEEP_TIME)
+            rno = random.randrange(1,3)
+            if rno % 2 == 0:
+                self.leave_arena()
+            else:
+                self.make_ready()
             
 class arenaChat(Arena):
     def __init__(self, name, password):
