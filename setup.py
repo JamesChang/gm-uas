@@ -39,7 +39,7 @@ setup(
                         'gm.web.view.base',
     ],
     include_package_data = True,
-    install_requires=['demjson','config','sqlalchemy==0.5.8','flup', 'collective.ordereddict'], 
+    install_requires=['demjson','config','sqlalchemy==1.3.0','flup', 'collective.ordereddict'], 
     #这些软件无法通过easy_install安装：mod-python??,mysql-python #pil pymssql, django
     #这些软件是可选的lxml, flup
     #django debug toolbar, 
